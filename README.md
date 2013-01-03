@@ -28,13 +28,13 @@ Home is where the dotfiles are. These are mine.
 
 ### Custom options
 
-`~/.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add commands you don’t want to commit to a public repository. These files are also the ones which are not symlinked—instead, they are copied to your `~` directory.  
+`.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add commands you don’t want to commit to a public repository. These files are also the ones which are not symlinked—instead, they are copied to your `~` directory.  
 
 Example of `.extra` file:
 
 ```bash
 # PATH additions
-export PATH="~/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Set the extra .gitconfig file used for personal settings (modifies ~/.gitconfig)
 git config --global include.path "$HOME/.gitconfig_extra"

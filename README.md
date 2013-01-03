@@ -2,6 +2,11 @@
 
 Home is where the dotfiles are. These are mine.
 
+**Be advised**, my Bash skills are *really* limited, before working on this they were mainly based on setting commands in shell window :)  
+So if you see some error, or you know a better way on how to achieve specific task, please send me a feedback :)  
+
+Also, installation script is mostly my handywork, so if you’re unsure on what will happen, review it or do everything manually :)
+
 ## Installation
 
 1. Clone the repository in some directory (maybe `~/dotfiles`?):  
@@ -10,7 +15,7 @@ Home is where the dotfiles are. These are mine.
 	$ git clone https://github.com/niksy/dotfiles.git
 	```
 
-2. Enter directory where you’ve cloned dotfiles and run install script with `link` argument:  
+2. Enter the directory where you’ve cloned dotfiles and run install script with `link` argument:  
 	
 	```bash
 	$ sh dotfiles link
@@ -18,17 +23,17 @@ Home is where the dotfiles are. These are mine.
 
 	The script will symlink/copy all the necessary files to `~` directory. Follow instructions after the job is done.
 
-3. To remove created symlinks and/or remove copied files, run same install script inside `dotfiles` directory but with `unlink` argument:
+3. To remove created symlinks and/or remove copied files, run same install script inside `dotfiles` directory, but with `unlink` argument:
 
 	```bash
 	$ sh dotfiles unlink
 	```
 
-4. For your convenience there is a `dotfiles refresh` command which will source all the files (except `.osx`) if you’ve made some changes. That command is aliased to `dfr` for even more convenience :).
+4. For your convenience there is a `dotfiles refresh` command which will source all the files (except `.osx_defaults`) if you’ve made some changes. That command is aliased to `dfr` for even more convenience :)
 
 ### Custom options
 
-`.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add commands you don’t want to commit to a public repository. These files are also the ones which are not symlinked—instead, they are copied to your `~` directory.  
+`.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add the commands you don’t want to commit to a public repository. These files are also the ones which are not symlinked—instead, they are copied to your `~` directory.  
 
 Example of `.extra` file:
 
@@ -39,7 +44,7 @@ export PATH="$HOME/bin:$PATH"
 # Set the extra .gitconfig file used for personal settings (modifies ~/.gitconfig)
 git config --global include.path "$HOME/.gitconfig_extra"
 
-# Set computer name which can be used with .osx file
+# Set the computer name which can be used with .osx file
 COMPUTER_NAME="{Le machine}"
 ```
 
@@ -51,7 +56,9 @@ COMPUTER_NAME="{Le machine}"
 
 ### OS X defaults
 
-These are some OS X defaults I use, but larger collection can be found in [`.osx` defaults by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) and in comments at the top of the file in my repository:
+These are some OS X defaults I use, but larger collection can be found in [`.osx` defaults by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) and in the comments at the top of the file in my repository.  
+
+Run the supplied install script with following command (remember, this will work **only** on OS X):
 
 ```bash
 $ source ~/.osx_defaults
@@ -61,9 +68,9 @@ $ source ~/.osx_defaults
 
 Installing [Homebrew](http://mxcl.github.com/homebrew/) will save your sanity while trying to install packages not available by default on OS X.
 
-I like to install Homebrew and its packges without any automation script, it makes it easier to debug if something goes wrong while installing packages :).
+I like to install Homebrew and its packages without any automated script, it makes it easier to debug if something goes wrong while installing packages :)
 
-Here is the list of packges I currently use:
+Here is the list of packages I currently use:
 
 * [git](http://git-scm.com/)
 * [meld](http://meldmerge.org/)
@@ -72,11 +79,11 @@ Here is the list of packges I currently use:
 * [php](http://php.net/)
 * [phpmyadmin](http://www.phpmyadmin.net/home_page/index.php)
 
-You can find whole list of available packages (along with other repositories) on [Braumeister](http://braumeister.org/).
+You can find a whole list of available packages (along with other repositories) on [Braumeister](http://braumeister.org/).
 
 ## Acknowledgements
 
-Code was taken from many sources and used [dotfiles by Mathias Bynens](https://github.com/mathiasbynens/dotfiles) as starting point.
+The code was taken from many sources and used [dotfiles by Mathias Bynens](https://github.com/mathiasbynens/dotfiles) as starting point.
 
 Other sources and inspiration include:
 

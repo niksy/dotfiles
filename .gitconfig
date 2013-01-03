@@ -46,7 +46,7 @@
 [color]
 	ui = true
 [color "branch"]
-	current = yellow black
+	current = blue
 	local = yellow
 	remote = magenta
 [color "diff"]
@@ -57,8 +57,8 @@
 	whitespace = white reverse
 [color "status"]
 	added = yellow
-	changed = green
-	untracked = cyan reverse
+	changed = red
+	untracked = cyan
 	branch = magenta
 
 # Use `origin` as the default remote on the `master` branch in all cases

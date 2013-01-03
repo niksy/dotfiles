@@ -1,0 +1,69 @@
+[alias]
+	# Unstage staged files
+	unstage = reset HEAD
+	# Uncommit last commit
+	uncommit = reset --soft HEAD^
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
+	# Pull with rebase
+	pullr = pull --rebase
+	# Pull with rebase and then push
+	pp = !git pull --rebase && git push
+	# Simple decorated log with 20 latest commits
+	lg = log --oneline --decorate -n 20
+	# Commit all changes
+	ca = !git add -A && git commit -av
+	# Amend last commit
+	amend = commit --amend
+
+[core]
+	editor = subl
+	# Set CRLF endings in Windows checkouts but LF endings on Mac and Linux systems and in the repository
+	autocrlf = input
+	# Use custom `.gitignore`
+	excludesfile = ~/.gitignore_global
+	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
+	# and carriage returns at the end of lines as OK
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+
+[merge]
+	tool = meld
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
+[push]
+	# Push changes only on current branch
+	default = tracking
+
+[help]
+	# Automatically run the command if it has only one match under current scenario
+	autocorrect = 1
+
+[color]
+	ui = true
+[color "branch"]
+	current = yellow black
+	local = yellow
+	remote = magenta
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red reverse
+	new = green reverse
+	whitespace = white reverse
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan reverse
+	branch = magenta
+
+# Use `origin` as the default remote on the `master` branch in all cases
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[include]
+	path = /Users/niksy/.gitconfig_extra

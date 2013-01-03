@@ -1,0 +1,75 @@
+#!/bin/bash
+
+DOTFILES_DIRECTORY="$(dirname "$0")"
+DOTFILES_DIRECTORY="$(cd "$DOTFILES_DIRECTORY"; pwd)"
+DOTFILES_EXCLUDES=(".DS_Store" "dotfiles" "README.md" ".git")
+DOTFILES_COPY=(".extra" ".gitconfig_extra")
+ARGS_ERROR="Invalid argument passed, please see help for possible values.\n\n"
+
+# Check for existence of value in array
+function in_array() {
+	local hay needle=$1
+	shift
+	for hay;
+	do
+		[[ $hay == $needle ]] && return 0
+	done
+	return 1
+}
+
+# Show help
+function help() {
+	printf "$(basename $0) [OPTION]
+
+Options:
+  link              Symlinks all files in $DOTFILES_DIRECTORY (with proper exclusions) to $HOME
+  unlink            Removes symlinks in $HOME for files in $DOTFILES_DIRECTORY
+  -h, --help        Display this help and exit
+"
+}
+
+# Perform linking operations
+function linkage() {
+	local CURRENT_FILE
+	shopt -s dotglob
+	for f in $DOTFILES_DIRECTORY/*;
+	do
+		CURRENT_FILE=$(basename $f)
+		if in_array "$CURRENT_FILE" "${DOTFILES_EXCLUDES[@]}"; then
+			continue
+		fi
+		if [ "$1" == "link" ]; then
+			# Copy files
+			if in_array "$CURRENT_FILE" "${DOTFILES_COPY[@]}"; then
+				cp -vi "$f" "$HOME/$CURRENT_FILE"
+			else
+				ln -sfhv "$f" "$HOME/$CURRENT_FILE"
+			fi
+		elif [ "$1" == "unlink" ]; then
+			# Ask if you want non-symlinked files removed
+			if in_array "$CURRENT_FILE" "${DOTFILES_COPY[@]}"; then
+				rm -vi "$HOME/$CURRENT_FILE"
+			else
+				rm -v "$HOME/$CURRENT_FILE"
+			fi
+		fi
+	done
+	shopt -u dotglob
+	printf "\nDone. To be sure everything is loaded, please open new shell window if\nthis is your first time using this script.\n"
+	printf "Otherwise, there is the command \e[1mdotfiles refresh\e[0m (aliased to \e[1mdfr\e[0m) which\nwill refresh any changes made while using current shell window.\n\n"
+}
+
+# Engage!
+if [[ $# == 1 ]]; then
+	case $1 in
+		link) linkage link ;;
+		unlink) linkage unlink ;;
+		-h|--help) help ;;
+		*) printf "$ARGS_ERROR"; help ;;
+	esac
+elif [[ $# == 0 ]]; then
+	help;
+else
+	printf "$ARGS_ERROR";
+	help;
+fi

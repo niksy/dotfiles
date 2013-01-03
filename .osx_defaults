@@ -39,6 +39,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
+# Caution: this will change setting globally for every application
+# To change it on per-app basis, instead `NSGlobalDomain`
+# use application identifier e.g. `com.apple.finder`
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default

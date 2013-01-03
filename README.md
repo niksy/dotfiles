@@ -47,7 +47,7 @@ COMPUTER_NAME="{Le machine}"
 
 `.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized). You can find my current OS X terminal preferences inside `.init` directory. Typeface in the screenshot is [DejaVu Sans Mono](http://dejavu-fonts.org/).
 
-![niksy Terminal display](dotfiles/.init/niksy-ss.png)
+![niksy Terminal display](https://raw.github.com/niksy/dotfiles/master/.init/niksy-ss.png)
 
 ### OS X defaults
 

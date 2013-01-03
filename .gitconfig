@@ -17,7 +17,7 @@
 	amend = commit --amend
 
 [core]
-	editor = subl
+	editor = subl -w
 	# Set CRLF endings in Windows checkouts but LF endings on Mac and Linux systems and in the repository
 	autocrlf = input
 	# Use custom `.gitignore`
@@ -67,3 +67,5 @@
 	merge = refs/heads/master
 [include]
 	path = /Users/niksy/.gitconfig_extra
+[remote "origin"]
+	push = HEAD

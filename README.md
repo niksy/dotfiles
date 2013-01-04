@@ -83,6 +83,10 @@ Here is the list of packages I currently use:
 
 You can find a whole list of available packages (along with other repositories) on [Braumeister](http://braumeister.org/).
 
+### Sublime Text syntax highlight
+
+If you’re using Sublime Text as your code editor, there is a [package](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) which will give you proper syntax highlight for these dotfiles. You can install it via [Sublime Text Package Control](http://wbond.net/sublime_packages/package_control).
+
 ## Acknowledgements
 
 The code was taken from many sources and used [dotfiles by Mathias Bynens](https://github.com/mathiasbynens/dotfiles) as starting point.

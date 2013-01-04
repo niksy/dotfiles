@@ -1,4 +1,6 @@
 [alias]
+	# Non-verbose status
+	st = status -sb
 	# Unstage staged files
 	unstage = reset HEAD
 	# Uncommit last commit
@@ -9,6 +11,12 @@
 	pullr = pull --rebase
 	# Pull with rebase and then push
 	pp = !git pull --rebase && git push
+	# Usage: rebase topic branch with main branch, checkout main branch
+	#        and then use this to merge topic on main, that way you avoid
+	#        creating merge commits
+	mergef = merge --ff-only
+	# Review code before commit
+	ap = add --patch
 	# Simple decorated log with 20 latest commits
 	lg = log --oneline --decorate -n 20
 	# Commit all changes

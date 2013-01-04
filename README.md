@@ -29,7 +29,9 @@ Also, installation script is mostly my handywork, so if you’re unsure on what 
 	$ sh dotfiles unlink
 	```
 
-4. For your convenience there is a `dotfiles refresh` command which will source all the files (except `.osx_defaults`) if you’ve made some changes. That command is aliased to `dfr` for even more convenience :)
+4. For your convenience there is a `dotfiles refresh` command which will source all the files (except `.osx_defaults`) if you’ve made some changes. That command is aliased to `dfr` for even more convenience :)  
+	
+	Also, if you want to view root directory of your dotfiles, command `dotfiles view` will do that for you.
 
 ### Custom options
 

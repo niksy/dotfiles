@@ -4,6 +4,7 @@ function dotfiles() {
 	if [[ $# == 1 ]]; then
 		case $1 in
 			refresh) source $HOME/.bash_profile; printf 'Dotfiles refreshed.\n' ;;
+			view) cd $(dirname $(readlink $HOME/.bash_profile)) ;;
 			*) printf "$ARGS_ERROR" ;;
 		esac
 	else

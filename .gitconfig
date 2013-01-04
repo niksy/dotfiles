@@ -16,7 +16,7 @@
 	# Commit with simple message
 	cm = commit -m
 	# Amend last commit
-	amend = commit --amend
+	amend = commit --amend -m
 
 [core]
 	editor = subl -w

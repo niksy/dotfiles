@@ -34,7 +34,7 @@
 	excludesfile = ~/.gitignore_global
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	# and carriage returns at the end of lines as OK
-	whitespace = -trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab,cr-at-eol
 
 [apply]
 	# Detect whitespace errors when applying a patch

@@ -75,6 +75,7 @@ I like to install Homebrew and its packages without any automated script, it mak
 Here is the list of packages I currently use:
 
 * [git](http://git-scm.com/)
+* [growlnotify](http://blog.lisp.tw/blog/2012/05/01/mac-install-growlnotify/)
 * [meld](http://meldmerge.org/)
 * [mysql](http://dev.mysql.com/doc/refman/5.5/en/)
 * [tree](http://mama.indstate.edu/users/ice/tree/)

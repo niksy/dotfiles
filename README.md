@@ -102,4 +102,5 @@ Other sources and inspiration include:
 * [Ben Alman](https://github.com/cowboy/dotfiles)
 * [Henrik Nyh](https://github.com/henrik/dotfiles)
 * [Jan Moesen](https://github.com/janmoesen/tilde)
+* [Christian Wesselhoeft](https://github.com/xtian/dotfiles)
 * These articles on how to create [better](http://lifehacker.com/5840450/add-a-handy-separator-between-commands-in-your-terminal-on-mac-os-x-and-linux) [bash](http://net.tutsplus.com/tutorials/other/how-to-customize-the-command-prompt/) [prompt](http://net.tutsplus.com/tutorials/tools-and-tips/how-to-customize-your-command-prompt/)

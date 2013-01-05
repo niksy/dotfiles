@@ -78,9 +78,11 @@ Here is the list of packages I currently use:
 * [growlnotify](http://blog.lisp.tw/blog/2012/05/01/mac-install-growlnotify/)
 * [meld](http://meldmerge.org/)
 * [mysql](http://dev.mysql.com/doc/refman/5.5/en/)
+* [node](http://nodejs.org/)
 * [tree](http://mama.indstate.edu/users/ice/tree/)
 * [php](http://php.net/)
 * [phpmyadmin](http://www.phpmyadmin.net/home_page/index.php)
+* [yuicompressor](http://yuilibrary.com/projects/yuicompressor)
 
 You can find a whole list of available packages (along with other repositories) on [Braumeister](http://braumeister.org/).
 

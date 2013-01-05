@@ -46,7 +46,7 @@ export PATH="$HOME/bin:$PATH"
 # Set the extra .gitconfig file used for personal settings (modifies ~/.gitconfig)
 git config --global include.path "$HOME/.gitconfig_extra"
 
-# Set the computer name which can be used with .osx file
+# Set the computer name which can be used with .osx_defaults file
 COMPUTER_NAME="{Le machine}"
 ```
 

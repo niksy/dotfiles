@@ -1,5 +1,5 @@
 # Modify `$PATH` (for Homebrew, local scripts, etc.)
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:/usr/local/share/npm/bin:$PATH"
 
 # Load the shell dotfiles
 #     * ~/.extra can be used for other settings you don’t want to commit.

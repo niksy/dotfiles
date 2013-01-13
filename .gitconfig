@@ -19,12 +19,12 @@
 	ap = add --patch
 	# Simple decorated log with 20 latest commits
 	lg = log --oneline --decorate -n 20
-	# Commit all changes
-	ca = !git add -A && git commit -av
-	# Commit with simple message
-	cm = commit -m
-	# Amend last commit
-	amend = commit --amend -m
+	# Commit all changes and add message inside editor
+	cam = !git add -A && git commit -av
+	# Commit with simple message inside editor
+	cm = commit
+	# Amend last commit inside editor
+	amend = commit --amend
 
 [core]
 	editor = subl -w

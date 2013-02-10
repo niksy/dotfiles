@@ -167,7 +167,7 @@ function entities() {
 				DECIMAL_VALUE=$(php -r 'echo mb_convert_encoding("&#" . intval('$PARSED_DECIMAL_VALUE') . ";", "UTF-8", "HTML-ENTITIES");');
 			fi
 		fi
-		printf $DECIMAL_VALUE;
+		printf "$DECIMAL_VALUE";
 		if [[ $3 == 'output' ]]; then
 			if [[ $2 == 'to' ]]; then
 				printf "\nHTML: &#$DECIMAL_VALUE;\n";
@@ -186,7 +186,7 @@ function entities() {
 			PARSED_HEXADECIMAL_VALUE=$(printf "$1" | sed "s/[^0-9A-Fa-f]{1,4}//g");
 			HEXADECIMAL_VALUE=$(__entities_decimal "$(printf "%d" 0x$PARSED_HEXADECIMAL_VALUE)" "from");
 		fi
-		printf $HEXADECIMAL_VALUE;
+		printf "$HEXADECIMAL_VALUE";
 		if [[ $3 == 'output' ]]; then
 			if [[ $2 == 'to' ]]; then
 				printf "\nHTML: &#x$HEXADECIMAL_VALUE;\nCSS:  %s$HEXADECIMAL_VALUE \n" "\\";

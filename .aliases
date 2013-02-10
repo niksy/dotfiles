@@ -11,6 +11,7 @@ alias vhosts=""
 alias dfr="dotfiles refresh"
 # Open `pwd` in Finder
 alias oo="open ."
+alias gitk="gitx"
 
 # Since we have `whoami`, why not have `whereami`? :)
 alias whereami="pwd"

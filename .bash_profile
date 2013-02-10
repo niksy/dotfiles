@@ -1,4 +1,4 @@
-# Modify `$PATH` (for Homebrew, local scripts, etc.)
+# Modify `$PATH` (for Homebrew, local scripts, Node, etc.)
 export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:/usr/local/share/npm/bin:$PATH"
 
 # Load the shell dotfiles

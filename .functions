@@ -104,9 +104,6 @@ EOF
 }
 
 # Count number of characters and words in string
-# TODO: This could be achieved with `wc` but it seems like it
-#       has some errors (characters with +1 length)
-#       coreutils has better implementation of `wc`
 function txtcount() {
 	if [[ $# != 0 ]]; then
 		local CHARACTER_COUNT=$(printf "$@" | wc -m | tr -d ' ');

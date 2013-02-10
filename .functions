@@ -103,28 +103,6 @@ end tell
 EOF
 }
 
-# Get a character’s Unicode code point
-function codepoint() {
-	perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
-	echo # newline
-}
-
-# Decode \x{ABCD}-style Unicode escape sequences
-function unidecode() {
-	perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
-	echo # newline
-}
-
-# Encode characters to their numeric entity and vice versa
-function numeric_entity_encode() {
-	php -r "echo mb_encode_numericentity('$1', array (0x0, 0xffff, 0, 0xffff), 'UTF-8');"
-	printf "\n"
-}
-function numeric_entity_decode() {
-	php -r "echo mb_decode_numericentity('$1', array (0x0, 0xffff, 0, 0xffff), 'UTF-8');"
-	printf "\n"
-}
-
 # Count number of characters and words in string
 # TODO: This could be achieved with `wc` but it seems like it
 #       has some errors (characters with +1 length)

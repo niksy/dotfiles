@@ -17,6 +17,8 @@
 	mergef = merge --ff-only
 	# Review code before commit
 	ap = add --patch
+	# Add all (including non-staged) files
+	aa = add -A
 	# Simple decorated log with 20 latest commits
 	lg = log --oneline --decorate -n 20
 	# Commit all changes and add message inside editor
@@ -48,10 +50,6 @@
 [push]
 	# Push changes only on current branch
 	default = tracking
-
-[help]
-	# Automatically run the command if it has only one match under current scenario
-	autocorrect = 1
 
 [color]
 	ui = true

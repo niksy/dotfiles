@@ -196,14 +196,47 @@ function entities() {
 		fi
 	}
 
+	function __entities_nument() {
+		local STRING;
+		if [[ $2 == 'to' ]]; then
+			if command -v node >/dev/null 2>&1; then
+				STRING=$(node -e '
+					var input_string = process.argv[1];
+					var unicode_string = "";
+					for(var i = 0; i < input_string.length; i++){
+						var char_code = input_string.charCodeAt(i);
+						char_code = "&#" + char_code + ";";
+						unicode_string += char_code;
+					}
+					console.log(unicode_string);' "$1" | tr -d '\n');
+			else
+				STRING=$(php -r 'echo mb_encode_numericentity($argv[1], array (0x0, 0xffff, 0, 0xffff), "UTF-8");' "$1");
+			fi
+		elif [[ $2 == 'from' ]]; then
+			if command -v node >/dev/null 2>&1; then
+				STRING=$(node -e '
+					var input_string = process.argv[1];
+					input_string = input_string.replace(/&#/g,"").split(";");
+					input_string.pop();
+					console.log(String.fromCharCode.apply(null, input_string));' "$1" | tr -d '\n');
+			else
+				STRING=$(php -r 'echo mb_decode_numericentity($argv[1], array (0x0, 0xffff, 0, 0xffff), "UTF-8");' "$1");
+			fi
+		fi
+		printf "$STRING";
+		printf "\n";
+	}
+
 	function __entities_help() {
 		printf "entities [OPTION] [VALUE]
 
 Options:
   todec             Convert from character to decimal value
   tohex             Convert from character to hexadecimal value
+  tonument          Convert string to numeric entities
   fromdec           Convert from decimal to character value
   fromhex           Convert from hexadecimal to character value
+  fromnument        Convert numeric entities to string
   -h, --help        Display this help and exit\n\n"
 		printf "Notes:\n"
 		printf "* When used without quotes, \e[1m%s\e[0m, \e[1m%s\e[0m and \e[1m%s\e[0m must be escaped.\n" "\\" "\"" "'"
@@ -217,6 +250,8 @@ Options:
 			tohex) __entities_hexadecimal "$2" "to" "output" ;;
 			fromdec) __entities_decimal "$2" "from" "output" ;;
 			fromhex) __entities_hexadecimal "$2" "from" "output" ;;
+			tonument) __entities_nument "$2" "to" ;;
+			fromnument) __entities_nument "$2" "from" ;;
 			--help|-h|*) __entities_help ;;
 		esac
 	else

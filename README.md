@@ -83,6 +83,9 @@ Here is the list of packages I currently use:
 * [php](http://php.net/)
 * [phpmyadmin](http://www.phpmyadmin.net/home_page/index.php)
 * [yuicompressor](http://yuilibrary.com/projects/yuicompressor)
+* [closure-compiler](https://developers.google.com/closure/compiler/)
+* [libicns](http://icns.sourceforge.net/)
+* [icoutils](http://www.nongnu.org/icoutils/)
 
 You can find a whole list of available packages (along with other repositories) on [Braumeister](http://braumeister.org/).
 

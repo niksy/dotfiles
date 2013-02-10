@@ -181,7 +181,7 @@ function entities() {
 		local HEXADECIMAL_VALUE;
 		local PARSED_HEXADECIMAL_VALUE;
 		if [[ $2 == 'to' ]]; then
-			HEXADECIMAL_VALUE=$(printf %x $(__entities_decimal "$1" "to"));
+			HEXADECIMAL_VALUE=$(printf "%04x" $(__entities_decimal "$1" "to"));
 		elif [[ $2 == 'from' ]]; then
 			PARSED_HEXADECIMAL_VALUE=$(printf "$1" | sed "s/[^0-9A-Fa-f]{1,4}//g");
 			HEXADECIMAL_VALUE=$(__entities_decimal "$(printf "%d" 0x$PARSED_HEXADECIMAL_VALUE)" "from");

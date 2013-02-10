@@ -107,11 +107,15 @@ EOF
 # TODO: This could be achieved with `wc` but it seems like it
 #       has some errors (characters with +1 length)
 #       coreutils has better implementation of `wc`
-function text_count() {
-	local CHARACTER_COUNT=`php -r "echo strlen('$@');"`;
-	local WORD_COUNT=`php -r "echo str_word_count('$@');"`;
-	printf "Number of characters: \e[1m$CHARACTER_COUNT\e[0m\n";
-	printf "Number of words: \e[1m$WORD_COUNT\e[0m\n";
+function txtcount() {
+	if [[ $# != 0 ]]; then
+		local CHARACTER_COUNT=$(printf "$@" | wc -m | tr -d ' ');
+		local WORD_COUNT=$(printf "$@" | wc -w | tr -d ' ');
+		printf "Number of characters: \e[1m$CHARACTER_COUNT\e[0m\n";
+		printf "Number of words: \e[1m$WORD_COUNT\e[0m\n";
+	else
+		printf "No text supplied.\n";
+	fi
 }
 
 # Use ImageOptim from command line

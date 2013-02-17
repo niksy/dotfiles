@@ -146,6 +146,7 @@ function imageoptim() {
 	fi
 }
 
+# Entities conversion
 function entities() {
 
 	local ARGS_ERROR="Invalid or no argument passed.\n"

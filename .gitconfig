@@ -11,10 +11,8 @@
 	pullr = pull --rebase
 	# Pull with rebase and then push
 	pp = !git pull --rebase && git push
-	# Usage: rebase topic branch with main branch, checkout main branch
-	#        and then use this to merge topic on main, that way you avoid
-	#        creating merge commits
-	mergef = merge --ff-only
+	# Always add merge commit when merging
+	mergec = merge --no-ff
 	# Review code before commit
 	ap = add --patch
 	# Add all (including non-staged) files
@@ -25,8 +23,12 @@
 	cam = !git add -A && git commit -av
 	# Commit with simple message inside editor
 	cm = commit
+	# Checkout
+	co = checkout
 	# Amend last commit inside editor
 	amend = commit --amend
+	# Search for branch
+	brep = !git branch -a | grep
 
 [core]
 	editor = subl -w

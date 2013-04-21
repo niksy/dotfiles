@@ -40,9 +40,6 @@ Also, installation script is mostly my handywork, so if you’re unsure on what 
 Example of `.extra` file:
 
 ```bash
-# PATH additions
-export PATH="$HOME/bin:$PATH"
-
 # Set the extra .gitconfig file used for personal settings (modifies ~/.gitconfig)
 git config --global include.path "$HOME/.gitconfig_extra"
 

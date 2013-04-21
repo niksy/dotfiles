@@ -15,4 +15,5 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:* --version"
 
 # Tell grep to highlight matches
 export GREP_COLOR='1;31'
+# Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"

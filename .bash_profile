@@ -2,7 +2,7 @@
 export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:/usr/local/share/npm/bin:$PATH"
 
 # Load the shell dotfiles
-#     * ~/.extra can be used for other settings you don’t want to commit.
+# * ~/.extra can be used for other settings you don’t want to commit.
 for file in $HOME/.{bash_prompt,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && source "$file"
 done

@@ -86,6 +86,7 @@ Here is the list of packages I currently use:
 * [closure-compiler](https://developers.google.com/closure/compiler/)
 * [libicns](http://icns.sourceforge.net/)
 * [icoutils](http://www.nongnu.org/icoutils/)
+* [ruby](http://www.ruby-lang.org/en/)
 
 You can find a whole list of available packages (along with other repositories) on [Braumeister](http://braumeister.org/).
 

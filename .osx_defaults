@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # OSX customizations, courtesy of Mathias - http://mths.be/osx
 # These are only that I currently use, but you can find much more in the page mentioned above

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DOTFILES_DIRECTORY="$(dirname "$0")"
 DOTFILES_DIRECTORY="$(cd "$DOTFILES_DIRECTORY"; pwd)"

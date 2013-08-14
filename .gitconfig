@@ -29,6 +29,8 @@
 	amend = commit --amend
 	# Search for branch
 	brep = !git branch -a | grep
+	# Revert an applied stash (re-stash)
+	stash-unapply = !git stash show -p | git apply -R
 
 [core]
 	editor = subl -w

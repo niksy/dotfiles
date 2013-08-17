@@ -121,34 +121,3 @@ function txtcount() {
 		printf "No text supplied.\n";
 	fi
 }
-
-# Use ImageOptim from command line
-# If you don’t want to depend on ImageOptim,
-# you can try with https://github.com/toy/image_optim
-function imageoptim() {
-	local TEXT_INSTALL="Install ImageOptim"
-	local TEXT_DONT_INSTALL="Don’t install ImageOptim"
-	if [[ $OSTYPE =~ "darwin" ]]; then
-		if [ -a "/Applications/ImageOptim.app" ]; then
-			open -a ImageOptim.app "$@";
-		else
-			printf "It seems like you don’t have ImageOptim installed. Would you like to install it?\n"
-			select yn in "$TEXT_INSTALL" "$TEXT_DONT_INSTALL"; do
-				case $yn in
-					"$TEXT_INSTALL" )
-						curl -O http://imageoptim.com/ImageOptim.tbz2
-						tar -xjf ImageOptim.tbz2
-						mv ImageOptim.app /Applications/
-						rm ImageOptim.tbz2
-						break;
-						;;
-					"$TEXT_DONT_INSTALL" )
-						break;
-						;;
-				esac
-			done
-		fi
-	else
-		printf "Sorry, ImageOptim is available only on OS X.";
-	fi
-}

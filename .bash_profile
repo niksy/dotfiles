@@ -4,7 +4,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:/usr/local/shar
 # Load the shell dotfiles
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in $HOME/.{bash_prompt,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && source "$file"
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
 

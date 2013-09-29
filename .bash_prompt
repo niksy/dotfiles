@@ -34,7 +34,6 @@ function __print_before_the_prompt() {
 
 }
 
-GIT_PS1_SHOWDIRTYSTATE=true
 PROMPT_COMMAND=__print_before_the_prompt
 
 PS1="\[\e[0;31m\]⦿\[\e[0m\e[1m\] "

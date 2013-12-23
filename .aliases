@@ -57,3 +57,6 @@ alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

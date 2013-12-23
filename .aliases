@@ -7,7 +7,7 @@ alias -- -="cd -"
 alias sites="cd $HOME/Sites"
 alias s="subl"
 alias hosts="sudo subl /etc/hosts"
-alias vhosts=""
+alias vhosts="cd $(brew --prefix apache24)/sites-available"
 alias dfr="dotfiles refresh"
 # Open `pwd` in Finder
 alias oo="open ."

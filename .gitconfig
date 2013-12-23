@@ -72,4 +72,5 @@
 	branch = magenta
 
 [include]
-	path = /Users/niksy/.gitconfig_extra
+	# Set the extra personal settings (e.g. name and email)
+	path = ~/.gitconfig_extra

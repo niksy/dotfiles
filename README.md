@@ -35,17 +35,7 @@ Also, installation script is mostly my handywork, so if you’re unsure on what 
 
 ### Custom options
 
-`.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add the commands you don’t want to commit to a public repository. These files are also the ones which are not symlinked—instead, they are copied to your `~` directory.  
-
-Example of `.extra` file:
-
-```bash
-# Set the extra .gitconfig file used for personal settings (modifies ~/.gitconfig)
-git config --global include.path "$HOME/.gitconfig_extra"
-
-# Set the computer name which can be used with .osx_defaults file
-COMPUTER_NAME="{Le machine}"
-```
+`.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add the commands you don’t want to commit to a public repository (e.g. company related information). You put them inside your `~` directory.
 
 ### Terminal display
 

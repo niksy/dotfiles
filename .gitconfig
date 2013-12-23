@@ -45,7 +45,7 @@
 	trustctime = false
 
 [merge]
-	tool = meld
+	tool = kdiff3
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 

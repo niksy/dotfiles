@@ -121,3 +121,8 @@ function txtcount() {
 		printf "No text supplied.\n";
 	fi
 }
+
+# Get gzip size of file
+function gzipsize() {
+	gzip -c "$@" | wc -c | sed -e 's/^ *//g' -e 's/ *$//g';
+}

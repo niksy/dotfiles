@@ -59,6 +59,18 @@ Installing [Homebrew](http://mxcl.github.com/homebrew/) will save your sanity wh
 
 I like to install Homebrew and its packages without any automated script, it makes it easier to debug if something goes wrong while installing packages :)
 
+#### CLI tools
+
+Before installing Homebrew, you should install Xcode CLI Tools.
+
+If you’re on Mavericks, simply enter `xcode-select --install` inside Terminal window and follow instructions.
+
+If you’re on earlier version of OSX, log in to Apple Developer page and find Command Line Tools package (not the whole Xcode).
+
+To verify that CLI tools are installed, check version of some CLI-tools-provided tool, e.g. `gcc`, via `gcc --version`. If everything is OK, you should see GCC version in your Terminal screen.
+
+#### Packages
+
 Here is the list of packages I currently use:
 
 * [git](http://git-scm.com/)

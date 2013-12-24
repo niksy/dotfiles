@@ -32,6 +32,12 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Disable menu bar transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
+# Set appearance to Graphite
+defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+
+# Set highlight color to blue
+defaults write NSGlobalDomain AppleHighlightColor -string "0.709800 0.835300 1.000000"
+
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
@@ -86,6 +92,15 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set mouse tracking speed (used in conjuction with SmoothMouse and LCC)
+defaults write NSGlobalDomain com.apple.mouse.scaling -float 0
+
+# Set scrolling speed
+defaults write NSGlobalDomain com.apple.scrollwheel.scaling -float 0.3125
+
+# Set doubleclick threshold
+defaults write NSGlobalDomain com.apple.mouse.doubleClickThreshold -float 0.5
 
 ################################################################################
 # Screen                                                                       #

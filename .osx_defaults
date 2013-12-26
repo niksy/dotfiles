@@ -86,6 +86,24 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
+# Set Croatian locale
+defaults write NSGlobalDomain AppleLocale -string "en_HR"
+
+# Set Croatian date format, but with English names
+defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "1" "dd.MM.yy."
+defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "2" "dd.MM.y."
+defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "3" "d. MMM y."
+defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "4" "EEEE, d. MMMM y."
+
+# Set Croatian time format
+defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "1" "HH:mm"
+defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "2" "HH:mm:ss"
+defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "3" "HH:mm:ss z"
+defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "4" "HH' h 'mm' min 'ss' s 'zzzz"
+
+# Disable day of the week in menu bar clock
+defaults write com.apple.menuextra.clock DateFormat -string 'HH:mm'
+
 ################################################################################
 # Periferals, accessibility and input                                          #
 ################################################################################

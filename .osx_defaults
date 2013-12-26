@@ -161,6 +161,9 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Finder                                                                       #
 ################################################################################
 
+# Open home directory by default
+defaults write com.apple.finder NewWindowTarget PfHm
+
 # Disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
@@ -186,7 +189,6 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-# defaults write com.apple.finder FXDefaultSearchScope -int 1396925286
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -247,9 +249,6 @@ defaults write com.apple.dock launchanim -bool false
 
 # Use scale animation when minimzing applications
 defaults write com.apple.dock mineffect -string "scale"
-
-# Enable the 2D Dock
-defaults write com.apple.dock no-glass -bool true
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true

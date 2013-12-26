@@ -42,14 +42,14 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 # Set appearance to Graphite
 defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 
-# Set highlight color to blue
-defaults write NSGlobalDomain AppleHighlightColor -string "0.709800 0.835300 1.000000"
-
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+# Set sidebar icon size to small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Increase window resize speed for Cocoa applications
 # Caution: this will change setting globally for every application
@@ -123,7 +123,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+# Save screenshots in PNG format
 defaults write com.apple.screencapture type -string "png"
 
 # Disable shadow in screenshots
@@ -131,9 +131,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
-# Set single color background for login screen
-defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture "/Library/Desktop\ Pictures/Solid\ Colors/Solid\ Gray\ Dark.png"
 
 ################################################################################
 # Finder                                                                       #

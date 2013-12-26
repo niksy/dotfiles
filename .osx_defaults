@@ -8,6 +8,10 @@
 #     * http://www.defaults-write.com/
 #     * https://twitter.com/defaultswrite
 #     * https://github.com/ptb/Mac-OS-X-Lion-Setup/blob/master/setup.sh
+#     * https://github.com/isao/shell/blob/master/osx-defaults.sh
+#     * https://github.com/ymendel/dotfiles/tree/master/osx
+#     * https://github.com/karmi/dotfiles/tree/master/mac
+#     * https://github.com/josh-/dotfiles/blob/master/osx
 # Remember: Most of the functionalities can be modified through similar commands like these,
 # they will work for system and third-party apps
 

@@ -14,6 +14,9 @@
 #     * https://github.com/josh-/dotfiles/blob/master/osx
 # Remember: Most of the functionalities can be modified through similar commands like these,
 # they will work for system and third-party apps
+#
+# Keyboard shortcuts defined here will not be shown in System Preferences pane
+# and if defined there it will override shortcuts defined here.
 
 # Ask for the administrator password upfront
 sudo -v
@@ -105,6 +108,9 @@ defaults write NSGlobalDomain com.apple.scrollwheel.scaling -float 0.3125
 
 # Set doubleclick threshold
 defaults write NSGlobalDomain com.apple.mouse.doubleClickThreshold -float 0.5
+
+# Change shortcut for cycling through windows (works with Croatian keyboard)
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Cycle Through Windows" "@\U201C"
 
 ################################################################################
 # Screen                                                                       #
@@ -200,6 +206,10 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
         OpenWith -bool true \
         Privileges -bool true
 
+# Add some convenient keyboard shortcuts
+defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Back" "@\U2190"
+defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Forward" "@\U2192"
+
 ################################################################################
 # Dock                                                                         #
 ################################################################################
@@ -231,6 +241,11 @@ defaults write com.apple.dock showhidden -bool true
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
+
+# Add some convenient keyboard shortcuts
+defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Return to Default Size" -string "@~/"
+defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Next Tab" "^\U0009"
+defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Previous Tab" "^$\U0009"
 
 ################################################################################
 # TextEdit                                                                     #

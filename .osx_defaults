@@ -322,7 +322,7 @@ defaults write com.apple.messageshelper.AlertsController PlaySoundsKey -bool fal
 # Kill affected applications                                                   #
 ################################################################################
 
-for app in "Dashboard" "Dock" "Finder" "SystemUIServer" "Terminal" "iTunes" "Messages";
+for app in "Address Book" "Dashboard" "Dock" "Finder" "iTunes" "Messages" "SystemUIServer" "Terminal";
 do
 	killall "$app" > /dev/null 2>&1
 done

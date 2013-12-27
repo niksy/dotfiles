@@ -11,13 +11,6 @@ export LS_COLORS='di=34;47:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=0;41:sg=
 # Load Git prompt for displaying repository status in command line
 [ -f "/usr/local/opt/git/etc/bash_completion.d/git-prompt.sh" ] && source "/usr/local/opt/git/etc/bash_completion.d/git-prompt.sh"
 
-# Only show username@server over SSH
-function __ssh_info() {
-	if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-		printf "\e[0;37;46m`whoami`@`hostname -s`\e[0m\e[47m "
-	fi
-}
-
 function __print_before_the_prompt() {
 
 	# Fill with characters for nicer separation

@@ -92,7 +92,7 @@ defaults write NSGlobalDomain AppleLocale -string "en_HR"
 # Set Croatian date format, but with English names
 defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "1" "dd.MM.yy."
 defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "2" "dd.MM.y."
-defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "3" "d. MMM y."
+defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "3" "dd.MM.y."
 defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "4" "EEEE, d. MMMM y."
 
 # Set Croatian time format

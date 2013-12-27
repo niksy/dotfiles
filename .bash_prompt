@@ -22,8 +22,8 @@ function __print_before_the_prompt() {
 	let fillsize=${fillsize}-1
 	done
 
-	printf "\e[0m\e[47m%s" "$fill"
-	printf "\n%s\e[1;30m%s%s\n" "$(__ssh_info)" "${PWD/$HOME/~}" "$(__git_ps1 "\e[0m [\e[0;34m%s\e[0m]")"
+	printf "\e[0m\e[47m%s\e[0m" "$fill"
+	printf "\n\e[1;30m\e[47m%s\e[0m%s\n" "${PWD/$HOME/~}" "$(__git_ps1 "\e[0m [\e[0;34m%s\e[0m]")"
 
 }
 

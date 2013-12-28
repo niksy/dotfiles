@@ -59,7 +59,11 @@ $ source ~/.osx
 
 Installing [Homebrew](http://brew.sh/) will save your sanity while trying to install packages not available by default on OS X.
 
-I like to install Homebrew and its packages without any automated script, it makes it easier to debug if something goes wrong while installing packages :)
+Automatic package installation can be done with `Brewfile`. This will install standard and binary (Cask) packages.
+
+```bash
+$ brew bundle ~/.dotfiles/Brewfile
+```
 
 #### CLI tools
 

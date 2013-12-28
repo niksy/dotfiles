@@ -57,7 +57,7 @@ $ source ~/.osx
 
 ### Homebrew
 
-Installing [Homebrew](http://mxcl.github.com/homebrew/) will save your sanity while trying to install packages not available by default on OS X.
+Installing [Homebrew](http://brew.sh/) will save your sanity while trying to install packages not available by default on OS X.
 
 I like to install Homebrew and its packages without any automated script, it makes it easier to debug if something goes wrong while installing packages :)
 
@@ -70,30 +70,6 @@ If you’re on Mavericks, simply enter `xcode-select --install` inside Terminal 
 If you’re on earlier version of OSX, log in to Apple Developer page and find Command Line Tools package (not the whole Xcode).
 
 To verify that CLI tools are installed, check version of some CLI-tools-provided tool, e.g. `gcc`, via `gcc --version`. If everything is OK, you should see GCC version in your Terminal screen.
-
-#### Packages
-
-Here is the list of packages I currently use:
-
-* [git](http://git-scm.com/)
-* [growlnotify](http://blog.lisp.tw/blog/2012/05/01/mac-install-growlnotify/)
-* [meld](http://meldmerge.org/)
-* [mysql](http://dev.mysql.com/doc/refman/5.5/en/)
-* [node](http://nodejs.org/)
-* [tree](http://mama.indstate.edu/users/ice/tree/)
-* [php](http://php.net/)
-* [phpmyadmin](http://www.phpmyadmin.net/home_page/index.php)
-* [yuicompressor](http://yuilibrary.com/projects/yuicompressor)
-* [closure-compiler](https://developers.google.com/closure/compiler/)
-* [libicns](http://icns.sourceforge.net/)
-* [icoutils](http://www.nongnu.org/icoutils/)
-* [ruby](http://www.ruby-lang.org/en/)
-
-You can find a whole list of available packages (along with other repositories) on [Braumeister](http://braumeister.org/).
-
-### Sublime Text syntax highlight
-
-If you’re using Sublime Text as your code editor, there is a [package](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) which will give you proper syntax highlight for these dotfiles. You can install it via [Sublime Text Package Control](http://wbond.net/sublime_packages/package_control).
 
 ## Acknowledgements
 

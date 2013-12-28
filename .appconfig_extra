@@ -1,0 +1,11 @@
+# ==============================================================================
+# Additional application config
+# ==============================================================================
+
+# Adjust QlColorCode typeface and theme
+defaults write org.n8gray.QLColorCode font Consolas
+defaults write org.n8gray.QLColorCode fontSizePoints 10
+# defaults write org.n8gray.QLColorCode hlTheme solarized-light
+
+# Recache config data (10.9 caches for current session)
+defaults read org.n8gray.QLColorCode

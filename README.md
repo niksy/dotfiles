@@ -37,6 +37,8 @@ Also, installation script is mostly my handywork, so if you’re unsure on what 
 
 `.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add the commands you don’t want to commit to a public repository (e.g. company related information). You put them inside your `~` directory.
 
+`.appconfig_extra` file contains some modifications for installed packages and applications.
+
 ### Terminal display
 
 `.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized). You can find my current OS X terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](http://en.wikipedia.org/wiki/Consolas).

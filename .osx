@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-# OSX customizations, courtesy of Mathias - http://mths.be/osx
-# These are only that I currently use, but you can find much more in the page mentioned above
-# (touchpad modifications, post-SL apps modifications, etc.)
-# More secrets:
+# ==============================================================================
+# OSX customizations
+#
+# These are only that I currently use, but here are some more:
+#     * http://mths.be/osx (main source of modifications)
 #     * http://secrets.blacktree.com/
 #     * http://www.defaults-write.com/
 #     * https://twitter.com/defaultswrite
@@ -12,11 +13,13 @@
 #     * https://github.com/ymendel/dotfiles/tree/master/osx
 #     * https://github.com/karmi/dotfiles/tree/master/mac
 #     * https://github.com/josh-/dotfiles/blob/master/osx
-# Remember: Most of the functionalities can be modified through similar commands like these,
-# they will work for system and third-party apps
+#
+# Most of the functionalities can be modified through similar commands like
+# these, they will work for system and third-party apps.
 #
 # Keyboard shortcuts defined here will not be shown in System Preferences pane
 # and if defined there it will override shortcuts defined here.
+# ==============================================================================
 
 # Ask for the administrator password upfront
 sudo -v
@@ -24,9 +27,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-################################################################################
-# General UI/UX                                                                #
-################################################################################
+# ==============================================================================
+# General UI/UX
+# ==============================================================================
 
 # Set computer name (as done via System Preferences → Sharing)
 # Set variable either from ~/.extra (or some other sourced file) or use default one
@@ -104,9 +107,9 @@ defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "4" "HH' h 'mm
 # Disable day of the week in menu bar clock
 defaults write com.apple.menuextra.clock DateFormat -string 'HH:mm'
 
-################################################################################
-# Periferals, accessibility and input                                          #
-################################################################################
+# ==============================================================================
+# Periferals, accessibility and input
+# ==============================================================================
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -137,9 +140,9 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # Change shortcut for cycling through windows (works with Croatian keyboard)
 defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Cycle Through Windows" "@\U201C"
 
-################################################################################
-# Screen                                                                       #
-################################################################################
+# ==============================================================================
+# Screen
+# ==============================================================================
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -157,9 +160,9 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-################################################################################
-# Finder                                                                       #
-################################################################################
+# ==============================================================================
+# Finder
+# ==============================================================================
 
 # Open home directory by default
 defaults write com.apple.finder NewWindowTarget PfHm
@@ -234,9 +237,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Back" "@\U2190"
 defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Forward" "@\U2192"
 
-################################################################################
-# Dock                                                                         #
-################################################################################
+# ==============================================================================
+# Dock
+# ==============================================================================
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -256,9 +259,9 @@ defaults write com.apple.dock autohide -bool true
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
-################################################################################
-# Terminal                                                                     #
-################################################################################
+# ==============================================================================
+# Terminal
+# ==============================================================================
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
@@ -268,9 +271,9 @@ defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Return to Defa
 defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Next Tab" "^\U0009"
 defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Previous Tab" "^$\U0009"
 
-################################################################################
-# TextEdit                                                                     #
-################################################################################
+# ==============================================================================
+# TextEdit
+# ==============================================================================
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
@@ -285,16 +288,9 @@ defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 # defaults write com.apple.TextEdit NSFixedPitchFont -string "Consolas"
 # defaults write com.apple.TextEdit NSFixedPitchFontSize -int 16
 
-################################################################################
-# Address Book                                                                 #
-################################################################################
-
-# Enable the debug menu in Address Book
-defaults write com.apple.addressbook ABShowDebugMenu -bool true
-
-################################################################################
-# Mac App Store                                                                #
-################################################################################
+# ==============================================================================
+# Mac App Store
+# ==============================================================================
 
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
@@ -302,9 +298,9 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
-################################################################################
-# Messages                                                                     #
-################################################################################
+# ==============================================================================
+# Messages
+# ==============================================================================
 
 # Disable automatic emoji substitution (i.e. use plain text smileys)
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
@@ -318,9 +314,9 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Disable sound effects
 defaults write com.apple.messageshelper.AlertsController PlaySoundsKey -bool false
 
-################################################################################
-# Kill affected applications                                                   #
-################################################################################
+# ==============================================================================
+# Kill affected applications
+# ==============================================================================
 
 for app in "Address Book" "Dashboard" "Dock" "Finder" "iTunes" "Messages" "SystemUIServer" "Terminal";
 do

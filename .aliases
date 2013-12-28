@@ -8,7 +8,6 @@ alias sites="cd $HOME/Sites"
 alias s="subl"
 alias hosts="sudo subl /etc/hosts"
 alias vhosts="cd /etc/apache2/sites-available"
-alias dfr="dotfiles refresh"
 # Open `pwd` in Finder
 alias oo="open ."
 alias gitk="gitx"

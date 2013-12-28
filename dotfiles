@@ -56,7 +56,7 @@ function linkage() {
 	done
 	shopt -u dotglob
 	printf "\nDone. To be sure everything is loaded, please open new shell window if\nthis is your first time using this script.\n"
-	printf "Otherwise, there is the command \e[1mdotfiles refresh\e[0m (aliased to \e[1mdfr\e[0m) which\nwill refresh any changes made while using current shell window.\n\n"
+	printf "Otherwise, there is the command \e[1mdotfiles refresh\e[0m which\nwill refresh any changes made while using current shell window.\n\n"
 }
 
 # Engage!

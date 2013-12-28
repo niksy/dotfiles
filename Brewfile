@@ -22,6 +22,8 @@ tap josegonzalez/php
 
 # ==============================================================================
 # Install binary packages (i.e. standard apps)
+#
+# Run `qlmanage -r` after installing QuickLook plugins.
 # ==============================================================================
 
 install brew-cask

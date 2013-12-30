@@ -50,11 +50,13 @@ cp Basso.aiff ~/Library/Sounds/
 killall NotificationCenter
 
 # ==============================================================================
-# Kill/recache affected applications
+# Full cleanup
 # ==============================================================================
 
+# Recache affected applications
 defaults read org.n8gray.QLColorCode
 
+# Kill affected applications
 for app in "Messages" "NotificationCenter";
 do
 	killall "$app" > /dev/null 2>&1

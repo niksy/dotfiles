@@ -13,6 +13,7 @@
 #     * https://github.com/ymendel/dotfiles/tree/master/osx
 #     * https://github.com/karmi/dotfiles/tree/master/mac
 #     * https://github.com/josh-/dotfiles/blob/master/osx
+#     * https://gist.github.com/johan/6108880
 #
 # Most of the functionalities can be modified through similar commands like
 # these, they will work for system and third-party apps.
@@ -137,8 +138,11 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain KeyRepeat -int 2
 
-# Change shortcut for cycling through windows (works with Croatian keyboard)
+# Change shortcut for "Cycle through windows" and "Move focus to next window"
+# to ⌘“ (works with Croatian keyboard)
 defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Cycle Through Windows" "@\U201C"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:0 8220" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:27:value:parameters:1 10" ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
 # ==============================================================================
 # Screen

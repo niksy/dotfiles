@@ -1,49 +1,55 @@
 [alias]
+	# Repository information
+	# --------------------------------------------------------------------------
 	# Non-verbose status
 	st = status -sb
-	# Unstage staged files
-	unstage = reset HEAD
-	# Uncommit last commit
-	uncommit = reset --soft HEAD^
-	# Undo a `git push`
-	undopush = push -f origin HEAD^:master
-	# Pull with rebase
-	pullr = pull --rebase
-	# Pull with rebase and then push
-	pp = !git pull --rebase && git push
-	# Always add merge commit when merging
-	mergec = merge --no-ff
+	# Simple decorated log with 20 latest commits
+	lg = log --oneline --decorate -n 20
+	# Get the current branch name
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+	# Commits
+	# --------------------------------------------------------------------------
 	# Review code before commit
 	ap = add --patch
 	# Add all (including non-staged) files
 	aa = add -A
-	# Simple decorated log with 20 latest commits
-	lg = log --oneline --decorate -n 20
 	# Commit all changes and add message inside editor
 	cam = !git add -A && git commit -av
 	# Commit with simple message inside editor
 	cm = commit
-	# Checkout
-	co = checkout
+	# Uncommit last commit
+	uncommit = reset --soft HEAD^
 	# Amend last commit inside editor
 	amend = commit --amend
+
+	# Stage
+	# --------------------------------------------------------------------------
+	# Unstage staged files
+	unstage = reset HEAD
+	# Show changes that have been staged
+	diffc = diff --cached
+
+	# Branches
+	# --------------------------------------------------------------------------
+	# Checkout
+	co = checkout
 	# Search for branch
 	brep = !git branch -a | grep
-	# Revert an applied stash (re-stash)
-	stash-unapply = !git stash show -p | git apply -R
-	# Get the current branch name (not so useful in itself, but used in
-	# other aliases)
-	branch-name = "!git rev-parse --abbrev-ref HEAD"
 	# Push the current branch to the remote "origin", and set it to track
 	# the upstream branch
 	publish = "!git push -u origin $(git branch-name)"
 	# Delete the remote version of the current branch
 	unpublish = "!git push origin :$(git branch-name)"
-	# Show changes that have been staged
-	diffc = diff --cached
-	# Mark a file as "assume unchanged", which means that Git will treat it
-	# as though there are no changes to it even if there are. Useful for
-	# temporary changes to tracked files
+	# Delete any branches that have been merged into master
+	# See also: https://gist.github.com/robmiller/5133264
+	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	# Always add merge commit when merging
+	mergec = merge --no-ff
+
+	# Files
+	# --------------------------------------------------------------------------
+	# Mark a file as "assume unchanged"
 	assume = update-index --assume-unchanged
 	# Reverse the above
 	unassume = update-index --no-assume-unchanged
@@ -53,9 +59,17 @@
 	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
 	# Checkout their version of a file and add it
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
-	# Delete any branches that have been merged into master
-	# See also: https://gist.github.com/robmiller/5133264
-	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	# Revert an applied stash (re-stash)
+	stash-unapply = !git stash show -p | git apply -R
+
+	# Remote
+	# --------------------------------------------------------------------------
+	# Undo a `git push`
+	undopush = push -f origin HEAD^:master
+	# Pull with rebase
+	pullr = pull --rebase
+	# Pull with rebase and then push
+	pp = !git pull --rebase && git push
 
 [core]
 	editor = subl -w

@@ -19,6 +19,7 @@ update
 tap homebrew/dupes
 tap phinze/cask
 tap josegonzalez/php
+tap niksy/pljoska
 
 # ==============================================================================
 # Install binary packages (i.e. standard apps)
@@ -57,6 +58,7 @@ install node
 install libicns
 install icoutils
 install kdiff3
+install entizeta
 
 # MAMP packages and dependancies
 # ------------------------------------------------------------------------------

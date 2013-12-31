@@ -58,6 +58,7 @@ install node
 install libicns
 install icoutils
 install kdiff3
+install z
 install entizeta
 
 # MAMP packages and dependancies

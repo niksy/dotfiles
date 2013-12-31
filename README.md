@@ -71,7 +71,7 @@ Before installing Homebrew, you should install Xcode CLI Tools.
 
 If you’re on Mavericks, simply enter `xcode-select --install` inside Terminal window and follow instructions.
 
-If you’re on earlier version of OSX, log in to Apple Developer page and find Command Line Tools package (not the whole Xcode).
+If you’re on earlier version of OS X, log in to Apple Developer page and find Command Line Tools package (not the whole Xcode).
 
 To verify that CLI tools are installed, check version of some CLI-tools-provided tool, e.g. `gcc`, via `gcc --version`. If everything is OK, you should see GCC version in your Terminal screen.
 

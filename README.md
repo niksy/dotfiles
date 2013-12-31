@@ -1,4 +1,4 @@
-# Dotfiles by Ivan Nikolić
+# Ivan’s dotfiles
 
 Home is where the dotfiles are. These are mine.
 
@@ -9,16 +9,16 @@ Also, installation script is mostly my handywork, so if you’re unsure on what 
 
 ## Installation
 
-1. Clone the repository in some directory (maybe `~/dotfiles`?):  
+1. Clone the repository in some directory:  
 	
 	```bash
-	$ git clone https://github.com/niksy/dotfiles.git
+	git clone https://github.com/niksy/dotfiles.git ~/.dotfiles
 	```
 
 2. Enter the directory where you’ve cloned dotfiles and run install script with `link` argument:  
 	
 	```bash
-	$ sh dotfiles link
+	sh dotfiles link
 	``` 
 
 	The script will symlink/copy all the necessary files to `~` directory. Follow instructions after the job is done.
@@ -26,7 +26,7 @@ Also, installation script is mostly my handywork, so if you’re unsure on what 
 3. To remove created symlinks and/or remove copied files, run same install script inside `dotfiles` directory, but with `unlink` argument:
 
 	```bash
-	$ sh dotfiles unlink
+	sh dotfiles unlink
 	```
 
 4. For your convenience there is a `dotfiles refresh` command which will source all necessary files if you’ve made some changes.
@@ -52,7 +52,7 @@ These are some OS X defaults I use, but larger collection can be found in [`.osx
 Run the supplied install script with following command (remember, this will work **only** on OS X):
 
 ```bash
-$ source ~/.osx
+source ~/.osx
 ```
 
 ### Homebrew
@@ -62,7 +62,7 @@ Installing [Homebrew](http://brew.sh/) will save your sanity while trying to ins
 Automatic package installation can be done with `Brewfile`. This will install standard and binary (Cask) packages.
 
 ```bash
-$ brew bundle ~/.dotfiles/Brewfile
+brew bundle ~/.dotfiles/Brewfile
 ```
 
 #### CLI tools

@@ -31,6 +31,31 @@
 	brep = !git branch -a | grep
 	# Revert an applied stash (re-stash)
 	stash-unapply = !git stash show -p | git apply -R
+	# Get the current branch name (not so useful in itself, but used in
+	# other aliases)
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+	# Show changes that have been staged
+	diffc = diff --cached
+	# Mark a file as "assume unchanged", which means that Git will treat it
+	# as though there are no changes to it even if there are. Useful for
+	# temporary changes to tracked files
+	assume = update-index --assume-unchanged
+	# Reverse the above
+	unassume = update-index --no-assume-unchanged
+	# Show the files that are currently assume-unchanged
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+	# Checkout our version of a file and add it
+	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+	# Checkout their version of a file and add it
+	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+	# Delete any branches that have been merged into master
+	# See also: https://gist.github.com/robmiller/5133264
+	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 [core]
 	editor = subl -w

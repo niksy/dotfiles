@@ -21,5 +21,5 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# Add tab completion for Git
+# Add tab completion for Git (if it exists)
 [ -f "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash" ] && source "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash"

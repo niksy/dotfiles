@@ -268,7 +268,7 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.Terminal StringEncodings -array 4
 
 # Add some convenient keyboard shortcuts
-defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Return to Default Size" -string "@~/"
+defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Return to Default Size" "@~/"
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Select Next Tab" "^\U21E5"
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Select Previous Tab" "^$\U21E5"
 
@@ -316,11 +316,45 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.apple.messageshelper.AlertsController PlaySoundsKey -bool false
 
 # ==============================================================================
+# Mail
+# ==============================================================================
+
+# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+# Add keyboard shortcuts
+#   * ⌘ + Enter = send email
+#   * ⌥ + A = Archive mail
+#   * ⌥ + M = Mark mail as read/unread
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21A9"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Archive" "~A"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "As Read" "~M"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "As Unread" "~M"
+
+# Disable inline attachments (just show the icons)
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+
+# Display unread messages with bold font
+defaults write com.apple.mail ShouldShowUnreadMessagesInBold -bool true
+
+# Show To/Cc label in the message list
+defaults write com.apple.mail EnableToCcInMessageList -bool true
+
+# Change typeface size
+defaults write com.apple.mail NSFontSize -int 14
+
+# Change monospace typeface to Consolas
+# N.B. This is commented out as there is a possibility that system
+# doesn't have this typeface and we want to avoid potential problems
+# defaults write com.apple.mail NSFixedPitchFont -string "Consolas"
+# defaults write com.apple.mail NSFixedPitchFontSize -int 14
+
+# ==============================================================================
 # Full cleanup
 # ==============================================================================
 
 # Fill keyboard shortcuts GUI with custom defined shortcuts
-defaults write com.apple.universalaccess com.apple.custommenu.apps -array "NSGlobalDomain" "com.apple.finder" "com.apple.Terminal"
+defaults write com.apple.universalaccess com.apple.custommenu.apps -array "NSGlobalDomain" "com.apple.finder" "com.apple.Terminal" "com.apple.mail"
 
 # Kill affected applications
 for app in "Address Book" "Dashboard" "Dock" "Finder" "iTunes" "Messages" "SystemUIServer" "Terminal";

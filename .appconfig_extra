@@ -50,11 +50,24 @@ cp Basso.aiff ~/Library/Sounds/
 killall NotificationCenter
 
 # ==============================================================================
+# Mail
+# ==============================================================================
+
+# Set custom Archive folder for specific mail account
+#   * Number "3" is entry inside array which can differ on every machine; use print
+#     to see which entry you want to change
+#   * Value of "ArchiveMailboxName" is name of the folder you want to be
+#     archive folder
+# /usr/libexec/PlistBuddy -c 'print :MailAccounts' ~/Library/Mail/V2/MailData/Accounts.plist
+# /usr/libexec/PlistBuddy -c 'Set :MailAccounts:3:ArchiveMailboxName "3K Arhiva"' ~/Library/Mail/V2/MailData/Accounts.plist
+
+# ==============================================================================
 # Full cleanup
 # ==============================================================================
 
 # Recache affected applications
 defaults read org.n8gray.QLColorCode
+defaults read com.apple.mail
 
 # Kill affected applications
 for app in "Messages" "NotificationCenter";

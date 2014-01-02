@@ -41,7 +41,7 @@ Also, installation script is mostly my handywork, so if you’re unsure on what 
 
 ### Terminal display
 
-`.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized). You can find my current OS X terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](http://en.wikipedia.org/wiki/Consolas).
+`.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized) (specifically, [fork by @tomislav](https://github.com/tomislav/osx-terminal.app-colors-solarized)). You can find my current OS X terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](http://en.wikipedia.org/wiki/Consolas).
 
 ![niksy Terminal display](.init/niksy-ss.png)
 

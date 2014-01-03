@@ -102,9 +102,10 @@ function remind() {
 		text=$(cat) # pipe
 	fi
 	osascript >/dev/null <<EOF
+set theDate to (date (short date string of ((current date)))) + ((24 + 9) * 60 * 60)
 tell application "Reminders"
 	tell the default list
-		make new reminder with properties {name:"$text"}
+		make new reminder with properties {name:"$text", remind me date:theDate}
 	end tell
 end tell
 EOF

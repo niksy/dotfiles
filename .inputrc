@@ -35,9 +35,9 @@ set convert-meta off
 "\e[B": history-search-forward
 "\e[A": history-search-backward
 
-# If you want to use Option and Control key as modifiers on OSX,
+# If you want to use keyboard modifiers on OSX,
 # Terminal keyboard options must be set to specific values (if not set already):
-#     * Option + Left: \033b ==> one word to the left
-#     * Option + Right: \033f ==> one word to the right
-#     * Control + Left: \033OH ==> go to the beginning of line
-#     * Control + Right: \033OF ==> go to the end of line
+#     * Option + Left:          \033b  ==> one word to the left
+#     * Option + Right:         \033f  ==> one word to the right
+#     * Option + Shift + Left:  \033OH ==> go to the beginning of line
+#     * Option + Shift + Right: \033OF ==> go to the end of line

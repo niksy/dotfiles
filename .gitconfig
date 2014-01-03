@@ -22,6 +22,8 @@
 	uncommit = reset --soft HEAD^
 	# Amend last commit inside editor
 	amend = commit --amend
+	# Rebase last n commits
+	replay = "!f() { git rebase -i HEAD~$@; }; f"
 
 	# Stage
 	# --------------------------------------------------------------------------

@@ -1,5 +1,7 @@
-# Modify `$PATH` (for Homebrew, local scripts, Node, etc.)
+# Modify paths (for Homebrew, local scripts, Node, etc.)
 export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:/usr/local/share/npm/bin:/usr/local/opt/ruby/bin:$PATH"
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
 export DEBUG="iectrl:*"
 
 # Load the shell dotfiles

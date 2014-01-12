@@ -1,17 +1,3 @@
-# Refresh all the dotfiles!
-function dotfiles() {
-	local ARGS_ERROR="Invalid or no argument passed, did you mean \e[1mrefresh\e[0m?\n"
-	if [[ $# == 1 ]]; then
-		case $1 in
-			refresh) source $HOME/.bash_profile; printf 'Dotfiles refreshed.\n' ;;
-			view) cd $(dirname $(readlink $HOME/.bash_profile)) ;;
-			*) printf "$ARGS_ERROR" ;;
-		esac
-	else
-		printf "$ARGS_ERROR";
-	fi
-}
-
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$@"

@@ -3,7 +3,7 @@
 DOTFILES_DIRECTORY="$(dirname "$0")"
 DOTFILES_DIRECTORY="$(cd "$DOTFILES_DIRECTORY"; pwd)"
 DOTFILES_EXCLUDES=(".DS_Store" "dotfiles" "README.md" ".git" "Brewfile")
-DOTFILES_COPY=(".extra" ".gitconfig_extra")
+DOTFILES_COPY=(".extra" ".gitconfig_extra" ".kdiff3rc")
 ARGS_ERROR="Invalid argument passed, please see help for possible values.\n\n"
 
 # Check for existence of value in array

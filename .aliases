@@ -66,3 +66,8 @@ alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resour
 
 # Faster NPM for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
+
+# Find outdated stuff
+alias outdated='sudo softwareupdate -l; brew doctor; brew outdated; npm outdated -g'
+# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update'

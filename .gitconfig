@@ -112,6 +112,10 @@
 	untracked = cyan
 	branch = magenta
 
+# URL shorthands
+[url "git@gist.github.com:"]
+	insteadOf = "https://gist.github.com/"
+
 [include]
 	# Set the extra personal settings (e.g. name and email)
 	path = ~/.gitconfig_extra

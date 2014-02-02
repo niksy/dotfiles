@@ -6,7 +6,7 @@ alias -- -="cd -"
 # Shortcuts
 alias sites="cd $HOME/Sites"
 alias s="subl"
-alias hosts="sudo subl /etc/hosts"
+alias hosts="sudo $EDITOR /etc/hosts"
 alias vhosts="cd /etc/apache2/sites-available"
 # Open `pwd` in Finder
 alias oo="open ."

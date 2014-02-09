@@ -48,6 +48,8 @@
 	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	# Always add merge commit when merging
 	mergec = merge --no-ff
+	# Release new version
+	release = "!git push && git push --tags"
 
 	# Files
 	# --------------------------------------------------------------------------

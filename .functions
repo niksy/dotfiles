@@ -109,7 +109,11 @@ function txtcount() {
 	fi
 }
 
-# Get gzip size of file
-function gzipsize() {
-	gzip -c "$@" | wc -c | sed -e 's/^ *//g' -e 's/ *$//g';
+# Compare original and gzipped file size
+function gz() {
+	local origsize=$(wc -c < "$1")
+	local gzipsize=$(gzip -c "$1" | wc -c)
+	local ratio=$(echo "$gzipsize * 100/ $origsize" | bc -l)
+	printf "orig: %d bytes\n" "$origsize"
+	printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio"
 }

@@ -7,6 +7,8 @@
 	lg = log --oneline --decorate -n 20
 	# Get the current branch name
 	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	# Copy current branch name
+	cbn = "!git branch-name | tr -d '\n' | pbcopy"
 
 	# Commits
 	# --------------------------------------------------------------------------

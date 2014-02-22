@@ -4,14 +4,16 @@ alias ..="cd .."
 alias -- -="cd -"
 
 # Shortcuts
-alias sites="cd $HOME/Sites"
 alias s="subl"
-alias hosts="sudo $EDITOR /etc/hosts"
-alias vhosts="cd /etc/apache2/sites-available"
 # Open `pwd` in Finder
 alias oo="open ."
 alias gitk="gitx"
 alias gobig="osascript -e 'tell application \"System Events\" to keystroke \"f\" using {command down, control down}'"
+
+alias sites="cd $HOME/Sites"
+alias hosts="sudo $EDITOR /etc/hosts"
+alias vhosts="cd /etc/apache2/sites-available"
+alias server="sudo apachectl"
 
 # Since we have `whoami`, why not have `whereami`? :)
 alias whereami="pwd"

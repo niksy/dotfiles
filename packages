@@ -8,6 +8,8 @@ sudo -v
 # ==============================================================================
 
 sudo gem install sass
+# If sass watcher warns about rb-fsevent:
+# sudo gem install --version '~> 0.9' rb-fsevent
 
 # ==============================================================================
 # Node packages

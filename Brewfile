@@ -37,7 +37,7 @@ cask install opera
 cask install sublime-text
 cask install the-unarchiver
 cask install transmission
-# cask install virtualbox
+cask install virtualbox
 # cask install logitech-control-center
 cask install flash
 cask install qlcolorcode

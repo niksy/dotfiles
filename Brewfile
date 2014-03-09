@@ -32,7 +32,7 @@ cask install google-chrome
 cask install imagealpha
 cask install imageoptim
 cask install moom
-cask install movist-fork
+cask install movist
 cask install opera
 cask install sublime-text
 cask install the-unarchiver

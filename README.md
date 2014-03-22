@@ -52,7 +52,7 @@ These are some OS X defaults I use, but larger collection can be found in [`.osx
 Run the supplied install script with following command (remember, this will work **only** on OS X):
 
 ```bash
-source ~/.osx
+source ~/.dotfiles/.osx
 ```
 
 ### Homebrew

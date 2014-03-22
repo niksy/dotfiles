@@ -23,30 +23,19 @@ defaults write org.n8gray.QLColorCode fontSizePoints 10
 # ==============================================================================
 
 # Change Notification Center sound from horrible Basso to something much nice.
+#
+# This is link to iOS7 tones and alert sounds, extracted from iOS source,
+# so it’s very likely that this is not legal.
 # ------------------------------------------------------------------------------
 
 cd ~
-mkd Tones
+mkdir Tones
 cd Tones
-
-# Download some ringtones.
-# This is link to iOS7 tones and alert sounds, extracted from iOS source,
-# so it’s very likely that this is not legal.
 curl -O http://www.cydiahacks.com/iOS7Tones.zip
-
-# Unzip the file to Tones directory inside current directory
 unzip iOS7Tones.zip -d Tones
-
-# Convert Calendar alert (or some other which you like) to AIFF format
 afconvert -f AIFF -d BEI24 Tones/Alerts/chord.m4r chord.aiff
-
-# Rename converted file to Basso.aiff
 mv chord.aiff Basso.aiff
-
-# Copy Basso.aiff to ~/Library/Sounds
 cp Basso.aiff ~/Library/Sounds/
-
-# Kill Notification Center
 killall NotificationCenter
 
 # ==============================================================================

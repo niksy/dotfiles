@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 
-# Ask for the administrator password upfront
-sudo -v
-
 # ==============================================================================
 # Ruby gems
 # ==============================================================================
 
-sudo gem install sass
-# If sass watcher warns about rb-fsevent:
-# sudo gem install --version '~> 0.9' rb-fsevent
+gem install sass --version '~>3.2.0'
+gem install rb-fsevent --version '~>0.9'
 
 # ==============================================================================
 # Node packages

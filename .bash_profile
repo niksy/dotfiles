@@ -25,7 +25,7 @@ shopt -s histappend
 shopt -s cdspell
 
 # Add tab completion for Git (if it exists)
-[ -f "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash" ] && source "/usr/local/opt/git/etc/bash_completion.d/git-completion.bash"
+[ -f "/usr/local/etc/bash_completion.d/git-completion.bash" ] && source "/usr/local/etc/bash_completion.d/git-completion.bash"
 
 # Add `z` to shell (if it exits; instructions as per `brew info z`)
 [ -f "/usr/local/etc/profile.d/z.sh" ] && source "/usr/local/etc/profile.d/z.sh"

@@ -26,6 +26,7 @@ tap niksy/pljoska
 # ==============================================================================
 
 install brew-cask
+cask install font-microsoft-cleartype-family
 cask install firefox
 cask install gitx-rowanj
 cask install google-chrome
@@ -58,6 +59,7 @@ install icoutils
 install kdiff3
 install z
 install entizeta
+install flegma
 
 # MAMP packages and dependancies
 # ------------------------------------------------------------------------------

@@ -280,12 +280,6 @@ defaults write com.apple.TextEdit RichText -int 0
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
-# Change monospace typeface to Consolas
-# N.B. This is commented out as there is a possibility that system
-# doesn't have this typeface and we want to avoid potential problems
-# defaults write com.apple.TextEdit NSFixedPitchFont -string "Consolas"
-# defaults write com.apple.TextEdit NSFixedPitchFontSize -int 16
-
 # ==============================================================================
 # Mac App Store
 # ==============================================================================
@@ -342,12 +336,6 @@ defaults write com.apple.mail EnableToCcInMessageList -bool true
 
 # Change typeface size
 defaults write com.apple.mail NSFontSize -int 14
-
-# Change monospace typeface to Consolas
-# N.B. This is commented out as there is a possibility that system
-# doesn't have this typeface and we want to avoid potential problems
-# defaults write com.apple.mail NSFixedPitchFont -string "Consolas"
-# defaults write com.apple.mail NSFixedPitchFontSize -int 14
 
 # ==============================================================================
 # Full cleanup

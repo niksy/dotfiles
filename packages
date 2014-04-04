@@ -19,3 +19,9 @@ npm install -g weinre
 npm install -g uglify-js
 npm install -g iectrl
 npm install -g localtunnel
+
+# ==============================================================================
+# Composer packages
+# ==============================================================================
+
+composer global require phing/phing:2.7.0

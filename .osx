@@ -74,9 +74,6 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
 
-# Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
-echo "0x08000100:0" > ~/.CFUserTextEncoding
-
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName

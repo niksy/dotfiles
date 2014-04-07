@@ -19,6 +19,7 @@ npm install -g weinre
 npm install -g uglify-js
 npm install -g iectrl
 npm install -g localtunnel
+npm install -g nodemon
 
 # ==============================================================================
 # Composer packages

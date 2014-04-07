@@ -39,6 +39,7 @@ cask install sublime-text
 cask install the-unarchiver
 cask install transmission
 cask install virtualbox
+cask install adobe-creative-cloud
 # cask install logitech-control-center
 cask install flash
 cask install qlcolorcode
@@ -54,6 +55,8 @@ cask install colorpicker-hex
 
 install git
 install node
+install phantomjs
+install mongodb
 install libicns
 install icoutils
 install kdiff3

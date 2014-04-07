@@ -70,7 +70,9 @@ install flegma
 install php55
 install php55-xdebug
 install php55-memcache
+install php55-redis
 install memcached
+install redis
 install composer
 
 # Remove outdated versions from the cellar

@@ -41,6 +41,8 @@ cask install transmission
 cask install virtualbox
 cask install adobe-creative-cloud
 # cask install logitech-control-center
+# cask install openoffice
+# cask install dropbox
 cask install flash
 cask install qlcolorcode
 cask install qlstephen

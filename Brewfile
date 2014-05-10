@@ -17,7 +17,7 @@ update
 # ==============================================================================
 
 tap homebrew/dupes
-tap phinze/cask
+tap caskroom/cask
 tap josegonzalez/php
 tap niksy/pljoska
 

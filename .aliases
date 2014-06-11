@@ -68,6 +68,8 @@ alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resour
 
 # Faster NPM for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
+# npm global module unlink
+alias npm-module-unlink="npm r -g"
 
 # Find outdated stuff
 alias outdated='sudo softwareupdate -l; brew doctor; brew outdated; npm outdated -g'

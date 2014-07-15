@@ -39,7 +39,7 @@
 	# Checkout
 	co = checkout
 	# Search for branch
-	brep = !git branch -a | grep
+	brep = !git branch -a | grep -i
 	# Push the current branch to the remote "origin", and set it to track
 	# the upstream branch
 	publish = "!git push -u origin $(git branch-name)"

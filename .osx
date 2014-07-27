@@ -339,7 +339,7 @@ defaults write com.apple.mail NSFontSize -int 14
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array "NSGlobalDomain" "com.apple.finder" "com.apple.Terminal" "com.apple.mail"
 
 # Kill affected applications
-for app in "Address Book" "Dashboard" "Dock" "Finder" "iTunes" "Messages" "SystemUIServer" "Terminal";
+for app in "Address Book" "cfprefsd" "Dashboard" "Dock" "Finder" "iTunes" "Messages" "SystemUIServer" "Terminal";
 do
 	killall "$app" > /dev/null 2>&1
 done

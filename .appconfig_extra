@@ -64,7 +64,7 @@ defaults read org.n8gray.QLColorCode
 defaults read com.apple.mail
 
 # Kill affected applications
-for app in "Messages" "NotificationCenter";
+for app in "cfprefsd" "Messages" "NotificationCenter";
 do
 	killall "$app" > /dev/null 2>&1
 done

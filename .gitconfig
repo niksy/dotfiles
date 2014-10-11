@@ -14,6 +14,8 @@
 	# --------------------------------------------------------------------------
 	# Review code before commit
 	ap = add --patch
+	# Interactive staging
+	ai = add --interactive
 	# Add all (including non-staged) files
 	aa = add -A
 	# Commit all changes and add message inside editor

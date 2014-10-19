@@ -19,9 +19,9 @@
 	# Add all (including non-staged) files
 	aa = add -A
 	# Commit all changes and add message inside editor
-	cam = !git add -A && git commit -av
+	cam = !git add -A && git commit -av --reedit-message=HEAD --reset-author
 	# Commit with simple message inside editor
-	cm = commit
+	cm = commit --reedit-message=HEAD --reset-author
 	# Uncommit last commit
 	uncommit = reset --soft HEAD^
 	# Amend last commit inside editor

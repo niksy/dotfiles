@@ -20,6 +20,7 @@ tap homebrew/dupes
 tap caskroom/cask
 tap josegonzalez/php
 tap niksy/pljoska
+tab homebrew/boneyard
 
 # ==============================================================================
 # Install binary packages (i.e. standard apps)

@@ -259,6 +259,16 @@ defaults write com.apple.dock showhidden -bool true
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.Terminal StringEncodings -array 4
 
+# Use a custom theme by default in Terminal.app
+# TERM_PROFILE='niksy';
+# CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
+# if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
+# 	open "${HOME}/.dotfiles/.init/${TERM_PROFILE}.terminal";
+# 	sleep 1; # Wait a bit to make sure the theme is loaded
+# 	defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
+# 	defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
+# fi;
+
 # Add some convenient keyboard shortcuts
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Return to Default Size" "@~/"
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Select Next Tab" "^\U21E5"

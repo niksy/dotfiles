@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+# ==============================================================================
+# Brewfile - one file to install them all
+#
+# Find more Homebrew packages at http://braumeister.org/
+# ==============================================================================
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# ==============================================================================
+# Add additional taps
+#
+# This will throw error if already tapped.
+#
+# Alternative is to use `brew install user/tap/formula`
+# Ref. https://github.com/Homebrew/homebrew/pull/25203#issuecomment-30569290
+# ==============================================================================
+
+brew tap homebrew/dupes
+brew tap caskroom/cask
+brew tap josegonzalez/php
+brew tap niksy/pljoska
+brew tap homebrew/boneyard
+
+# ==============================================================================
+# Install binary packages (i.e. standard apps)
+# ==============================================================================
+
+brew install brew-cask
+brew cask install font-microsoft-cleartype-family
+brew cask install firefox
+brew cask install gitx-rowanj
+brew cask install google-chrome
+brew cask install imagealpha
+brew cask install imageoptim
+brew cask install moom
+brew cask install movist
+brew cask install opera
+brew cask install sublime-text
+brew cask install the-unarchiver
+brew cask install transmission
+brew cask install virtualbox
+brew cask install adobe-creative-cloud
+brew cask install flash
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install betterzipql
+brew cask install suspicious-package
+brew cask install colorpicker-hex
+# brew cask install logitech-control-center
+# brew cask install openoffice
+# brew cask install dropbox
+
+# ==============================================================================
+# Install standard packages
+# ==============================================================================
+
+brew install git
+brew install node
+brew install phantomjs
+brew install mongodb
+brew install libicns
+brew install icoutils
+brew install kdiff3
+brew install z
+brew install entizeta
+brew install flegma
+
+# MAMP packages and dependancies
+# ------------------------------------------------------------------------------
+
+brew install php55
+brew install php55-xdebug
+brew install php55-memcache
+brew install php55-redis
+brew install memcached
+brew install redis
+brew install composer
+
+# Remove outdated versions from the cellar
+brew cleanup

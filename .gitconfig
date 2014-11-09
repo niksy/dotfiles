@@ -40,6 +40,8 @@
 	# --------------------------------------------------------------------------
 	# Checkout
 	co = checkout
+	# Checkout new branch
+	cob = checkout -b
 	# Search for branch
 	brep = !git branch -a | grep -i
 	# Push the current branch to the remote "origin", and set it to track
@@ -52,6 +54,9 @@
 	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	# Always add merge commit when merging
 	mergec = merge --no-ff
+	# Rebase operations
+	rbc = rebase --continue
+	rbs = rebase --skip
 	# Release new version
 	release = "!git push && git push --tags"
 

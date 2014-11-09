@@ -49,9 +49,6 @@
 	publish = "!git push -u origin $(git branch-name)"
 	# Delete the remote version of the current branch
 	unpublish = "!git push origin :$(git branch-name)"
-	# Delete any branches that have been merged into master
-	# See also: https://gist.github.com/robmiller/5133264
-	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	# Always add merge commit when merging
 	mergec = merge --no-ff
 	# Rebase operations
@@ -81,8 +78,6 @@
 	undopush = push -f origin HEAD^:master
 	# Pull with rebase
 	pullr = pull --rebase
-	# Pull with rebase and then push
-	pp = !git pull --rebase && git push
 
 [core]
 	editor = subl -w

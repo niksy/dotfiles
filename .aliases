@@ -9,6 +9,7 @@ alias s="subl"
 alias oo="open ."
 alias gitk="gitx"
 alias gobig="osascript -e 'tell application \"System Events\" to keystroke \"f\" using {command down, control down}'"
+alias pwdc="pwd | c"
 
 alias sites="cd $HOME/Sites"
 alias hosts="sudo $EDITOR /etc/hosts"

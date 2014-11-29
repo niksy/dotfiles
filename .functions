@@ -103,7 +103,12 @@ function txtcount() {
 # Compare original and gzipped file size
 function gz() {
 	local origsize=$(wc -c < "$1")
-	local gzipsize=$(gzip -c "$1" | wc -c)
+	local gzipsize
+	if command -v gzip-size >/dev/null 2>&1; then
+		gzipsize=$(gzip-size "$1")
+	else
+		gzipsize=$(gzip -c "$1" | wc -c)
+	fi
 	local ratio=$(echo "$gzipsize * 100/ $origsize" | bc -l)
 	printf "orig: %d bytes\n" "$origsize"
 	printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio"

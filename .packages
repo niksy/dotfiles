@@ -20,6 +20,7 @@ npm install -g uglify-js
 npm install -g iectrl
 npm install -g localtunnel
 npm install -g nodemon
+npm install -g gzip-size
 
 # ==============================================================================
 # Composer packages

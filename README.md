@@ -59,10 +59,12 @@ source ~/.dotfiles/.osx
 
 Installing [Homebrew](http://brew.sh/) will save your sanity while trying to install packages not available by default on OS X.
 
-Automatic package installation can be done with `Brewfile`. This will install standard and binary (Cask) packages.
+If you want the same control for standard OSX apps, try using [Homebrew Cask](http://caskroom.io/).
+
+Automatic package installation can be done with `.brew` script. This will install standard and binary (Cask) packages.
 
 ```bash
-brew bundle ~/.dotfiles/Brewfile
+~/.dotfiles/.brew
 ```
 
 #### CLI tools

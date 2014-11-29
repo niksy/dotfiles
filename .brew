@@ -25,7 +25,7 @@ brew tap niksy/pljoska
 brew tap homebrew/boneyard
 
 # ==============================================================================
-# Install binary packages (i.e. standard apps)
+# Install Cask apps/resources
 # ==============================================================================
 
 brew install brew-cask

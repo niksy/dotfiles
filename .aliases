@@ -3,9 +3,6 @@
 alias ..="cd .."
 alias -- -="cd -"
 
-# Shortcuts
-alias s="subl"
-# Open `pwd` in Finder
 alias oo="open ."
 alias gitk="gitx"
 alias gobig="osascript -e 'tell application \"System Events\" to keystroke \"f\" using {command down, control down}'"

@@ -36,7 +36,7 @@ brew cask install google-chrome
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install moom
-brew cask install movist
+brew cask install vlc
 brew cask install opera
 brew cask install sublime-text
 brew cask install the-unarchiver
@@ -53,6 +53,7 @@ brew cask install colorpicker-hex
 # brew cask install logitech-control-center
 # brew cask install openoffice
 # brew cask install dropbox
+# brew cask install movist
 
 # ==============================================================================
 # Install standard packages

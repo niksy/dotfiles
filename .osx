@@ -38,7 +38,7 @@ sudo scutil --set LocalHostName "$DOTFILES_COMPUTER_NAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$DOTFILES_COMPUTER_NAME"
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+# defaults write com.apple.universalaccess reduceTransparency -bool false
 
 # Set appearance to Graphite
 defaults write NSGlobalDomain AppleAquaColorVariant -int 6

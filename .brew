@@ -36,7 +36,7 @@ brew cask install google-chrome
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install moom
-brew cask install vlc
+brew cask install mpv
 brew cask install opera
 brew cask install sublime-text
 brew cask install the-unarchiver

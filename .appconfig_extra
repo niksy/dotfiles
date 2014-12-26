@@ -63,6 +63,13 @@ killall NotificationCenter
 defaults write com.google.Chrome DisablePrintPreview -bool true
 
 # ==============================================================================
+# MPV
+# ==============================================================================
+
+# Use Helvetica Bold as subtitle font
+echo "ass-force-style=FontName=Helvetica,Default.Bold=1" >> $(readlink /Applications/mpv.app)/Contents/Resources/mpv.conf
+
+# ==============================================================================
 # Full cleanup
 # ==============================================================================
 

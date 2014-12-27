@@ -19,10 +19,10 @@ brew update
 # ==============================================================================
 
 brew tap homebrew/dupes
-brew tap caskroom/cask
-brew tap josegonzalez/php
-brew tap niksy/pljoska
+brew tap homebrew/php
 brew tap homebrew/boneyard
+brew tap caskroom/cask
+brew tap niksy/pljoska
 
 # ==============================================================================
 # Install Cask apps/resources
@@ -73,10 +73,9 @@ brew install flegma
 # MAMP packages and dependancies
 # ------------------------------------------------------------------------------
 
-brew install php55
-brew install php55-xdebug
-brew install php55-memcache
-brew install php55-redis
+brew install php56
+brew install php56-xdebug
+brew install php56-memcache
 brew install memcached
 brew install redis
 brew install composer

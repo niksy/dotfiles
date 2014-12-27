@@ -22,6 +22,7 @@ brew tap homebrew/dupes
 brew tap homebrew/php
 brew tap homebrew/boneyard
 brew tap caskroom/cask
+brew tap caskroom/versions
 brew tap niksy/pljoska
 
 # ==============================================================================
@@ -38,7 +39,7 @@ brew cask install imageoptim
 brew cask install moom
 brew cask install mpv
 brew cask install opera
-brew cask install sublime-text
+brew cask install sublime-text3
 brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox

@@ -34,28 +34,6 @@ defaults write org.n8gray.QLColorCode font Consolas
 defaults write org.n8gray.QLColorCode fontSizePoints 10
 
 # ==============================================================================
-# Notification Center
-# ==============================================================================
-
-# Change Notification Center sound from horrible Basso to something much nice.
-#
-# This is link to iOS7 tones and alert sounds, extracted from iOS source,
-# so it’s very likely that this is not legal.
-# ------------------------------------------------------------------------------
-
-cd ~
-mkdir Tones
-cd Tones
-curl -O http://www.cydiahacks.com/iOS7Tones.zip
-unzip iOS7Tones.zip -d Tones
-afconvert -f AIFF -d BEI24 Tones/Alerts/chord.m4r chord.aiff
-mv chord.aiff Basso.aiff
-cp Basso.aiff ~/Library/Sounds/
-cd ~
-rm -rf Tones
-killall NotificationCenter
-
-# ==============================================================================
 # Google Chrome
 # ==============================================================================
 

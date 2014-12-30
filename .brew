@@ -83,3 +83,7 @@ brew install composer
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# Add `brew services` command for easier managment of services/daemons
+cd /usr/local/bin
+ln -s ../Library/Taps/homebrew/homebrew-boneyard/cmd/brew-services.rb brew-services.rb

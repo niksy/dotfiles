@@ -51,10 +51,6 @@ brew cask install qlmarkdown
 brew cask install betterzipql
 brew cask install suspicious-package
 brew cask install colorpicker-hex
-# brew cask install logitech-control-center
-# brew cask install openoffice
-# brew cask install dropbox
-# brew cask install movist
 
 # ==============================================================================
 # Install standard packages
@@ -78,7 +74,6 @@ brew install php56
 brew install php56-xdebug
 brew install php56-memcache
 brew install memcached
-brew install redis
 brew install composer
 
 # Remove outdated versions from the cellar

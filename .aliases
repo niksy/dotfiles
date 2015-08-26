@@ -22,7 +22,6 @@ alias sudo='sudo '
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0 || ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
@@ -44,15 +43,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias fshow="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias fhide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# URL-encode/decode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1]);"'
-
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
-
-# npm global module unlink
-alias npm-module-unlink="npm r -g"
 
 # Find outdated stuff
 alias outdated='sudo softwareupdate -l; brew doctor; brew outdated; npm outdated -g'

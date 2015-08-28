@@ -66,6 +66,7 @@ brew install kdiff3
 brew install z
 brew install entizeta
 brew install flegma
+brew install ssh-copy-id
 
 # MAMP packages and dependancies
 # ------------------------------------------------------------------------------

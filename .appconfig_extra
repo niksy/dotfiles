@@ -54,11 +54,21 @@ defaults write com.google.Chrome DisablePrintPreview -bool true
 # MPV
 # ==============================================================================
 
-# Use Helvetica Bold as subtitle font
 mpv_conf=$HOME/.config/mpv/mpv.conf;
-echo "ass-force-style=FontName=Helvetica,Default.Bold=1,FontSize=20" >> $mpv_conf
+mpv_input_conf=$HOME/.config/mpv/input.conf;
+
+echo "ass-style-override=force" >> $mpv_conf
+echo "sub-text-font='Helvetica:style=Bold'" >> $mpv_conf
+echo "sub-text-font-size=40" >> $mpv_conf
+echo "sub-text-border-size=2.5" >> $mpv_conf
+echo "sub-scale-by-window=no" >> $mpv_conf
 echo "osd-font='Helvetica:style=Bold'" >> $mpv_conf
-echo "osd-font-size=30" >> $mpv_conf
+echo "osd-font-size=40" >> $mpv_conf
+echo "osd-border-size=2.5" >> $mpv_conf
+echo "osd-scale-by-window=no" >> $mpv_conf
+
+echo "< add sub-scale -0.1" >> $mpv_input_conf
+echo "> add sub-scale +0.1" >> $mpv_input_conf
 
 # ==============================================================================
 # Full cleanup

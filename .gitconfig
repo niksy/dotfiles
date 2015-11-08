@@ -46,11 +46,11 @@
 	cob = checkout -b
 	# Search for branch
 	brep = !git branch -a | grep -i
-	# Push the current branch to the remote "origin", and set it to track
-	# the upstream branch
-	publish = "!git push -u origin $(git branch-name)"
+	# Push the current branch to the remote (default "origin"), and set it to
+	# track the upstream branch
+	publish = "!git push -u ${1:-origin} $(git branch-name)"
 	# Delete the remote version of the current branch
-	unpublish = "!git push origin :$(git branch-name)"
+	unpublish = "!git push ${1:-origin} :$(git branch-name)"
 	# Always add merge commit when merging
 	mergec = merge --no-ff
 	# Rebase operations

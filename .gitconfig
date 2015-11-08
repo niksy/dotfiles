@@ -76,8 +76,6 @@
 
 	# Remote
 	# --------------------------------------------------------------------------
-	# Undo a `git push`
-	undopush = push -f origin HEAD^:master
 	# Pull with rebase
 	pullr = pull --rebase
 

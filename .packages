@@ -11,15 +11,9 @@ gem install rb-fsevent --version '~>0.9'
 # Node packages
 # ==============================================================================
 
-npm install -g grunt-cli
-npm install -g bower
-npm install -g jshint
-npm install -g eslint
 npm install -g weinre
-npm install -g uglify-js
 npm install -g iectrl
 npm install -g localtunnel
-npm install -g nodemon
 npm install -g gzip-size
 
 # ==============================================================================

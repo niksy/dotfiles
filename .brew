@@ -30,7 +30,6 @@ brew tap niksy/pljoska
 # Install Cask apps/resources
 # ==============================================================================
 
-brew install brew-cask
 brew cask install font-microsoft-cleartype-family
 brew cask install firefox
 brew cask install rowanj-gitx

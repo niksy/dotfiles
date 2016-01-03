@@ -12,6 +12,9 @@ alias hosts="sudo $EDITOR /etc/hosts"
 alias vhosts="cd /etc/apache2/sites-available"
 alias server="sudo httpd -k"
 
+# Search current directory for file
+alias spot="mdfind -onlyin $(pwd) -name"
+
 # Always use color output for `ls` and display additional info for entries
 # (slashes for directories, @ for symlinks, etc.)
 alias ls="ls -GF"

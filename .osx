@@ -274,6 +274,9 @@ defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Return to Defa
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Show Next Tab" "^\U21E5"
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Show Previous Tab" "^$\U21E5"
 
+# Use Marks functionality, but don’t show them
+defaults write com.apple.terminal ShowLineMarks -bool false
+
 # ==============================================================================
 # TextEdit
 # ==============================================================================

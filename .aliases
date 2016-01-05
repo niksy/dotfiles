@@ -14,6 +14,8 @@ alias server="sudo httpd -k"
 
 # Search current directory for file
 alias spot="mdfind -onlyin $(pwd) -name"
+# Search current directory for hidden file
+alias spoth="find $(pwd) -name"
 
 # Always use color output for `ls` and display additional info for entries
 # (slashes for directories, @ for symlinks, etc.)

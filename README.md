@@ -2,11 +2,6 @@
 
 Home is where the dotfiles are. These are mine.
 
-**Be advised**, my Bash skills are *really* limited, before working on this they were mainly based on setting commands in shell window :)  
-So if you see some error, or you know a better way on how to achieve specific task, please send me a feedback :)  
-
-Also, installation script is mostly my handywork, so if you’re unsure on what will happen, review it or do everything manually :)
-
 ## Installation
 
 1. Clone the repository in some directory:  

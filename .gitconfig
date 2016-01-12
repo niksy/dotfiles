@@ -29,7 +29,7 @@
 	# Rebase last n commits
 	replay = "!f() { git rebase -i HEAD~$@; }; f"
 	# Cherry-pick and rebase range of commits
-	cherry-pick-range = "!f() { git rebase --onto $(git branch-name) $1^ $2; }; f"
+	cherry-pick-range = "!f() { git rebase --onto $(git branch-name) $1^ $2 && echo \"\nCreate new branch with 'git branch {branch-name}'\n\"; }; f"
 
 	# Stage
 	# --------------------------------------------------------------------------

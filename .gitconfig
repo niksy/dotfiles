@@ -20,6 +20,8 @@
 	aa = add -A
 	# Commit with simple message inside editor
 	cm = commit --reedit-message=HEAD --reset-author
+	# WIP commit which can be discarded, ammended, squashed, etc.
+	wip = commit --message="WIP"
 	# Uncommit last commit
 	uncommit = reset --soft HEAD^
 	# Amend last commit inside editor

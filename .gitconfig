@@ -18,8 +18,6 @@
 	ai = add --interactive
 	# Add all (including non-staged) files
 	aa = add -A
-	# Commit all changes and add message inside editor
-	cam = !git add -A && git commit -av --reedit-message=HEAD --reset-author
 	# Commit with simple message inside editor
 	cm = commit --reedit-message=HEAD --reset-author
 	# Uncommit last commit

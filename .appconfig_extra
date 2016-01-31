@@ -58,13 +58,16 @@ mpv_conf=$HOME/.config/mpv/mpv.conf;
 mpv_input_conf=$HOME/.config/mpv/input.conf;
 
 echo "ass-style-override=force" >> $mpv_conf
-echo "sub-text-font='Helvetica:style=Bold'" >> $mpv_conf
-echo "sub-text-font-size=40" >> $mpv_conf
-echo "sub-text-border-size=2.5" >> $mpv_conf
+echo "sub-text-font='Helvetica'" >> $mpv_conf
+echo "sub-text-bold=yes" >> $mpv_conf
+echo "sub-text-font-size=55" >> $mpv_conf
+echo "sub-text-border-size=4" >> $mpv_conf
 echo "sub-scale-by-window=no" >> $mpv_conf
-echo "osd-font='Helvetica:style=Bold'" >> $mpv_conf
-echo "osd-font-size=40" >> $mpv_conf
-echo "osd-border-size=2.5" >> $mpv_conf
+echo "sub-use-margins=no" >> $mpv_conf
+echo "osd-font='Helvetica'" >> $mpv_conf
+echo "osd-bold=yes" >> $mpv_conf
+echo "osd-font-size=55" >> $mpv_conf
+echo "osd-border-size=4" >> $mpv_conf
 echo "osd-scale-by-window=no" >> $mpv_conf
 
 echo "< add sub-scale -0.1" >> $mpv_input_conf

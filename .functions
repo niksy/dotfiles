@@ -151,3 +151,8 @@ function server() {
 	sudo httpd -k $1
 
 }
+
+# Get current weather based on location from IP or provided with argument
+function meteo() {
+	curl -s4 http://wttr\.in/$1 | head -7
+}

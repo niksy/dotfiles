@@ -1,7 +1,6 @@
 # Modify paths (for Homebrew, local scripts, Node, etc.)
-export GEM_HOME="/usr/local/system_ruby_gems"
 export COMPOSER_HOME="/usr/local/composer_packages"
-export PATH="/usr/local/bin:/usr/local/sbin:$GEM_HOME/bin:$COMPOSER_HOME/vendor/bin:$HOME/bin:$HOME/.bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$COMPOSER_HOME/vendor/bin:$HOME/bin:$HOME/.bin:$PATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 export DEBUG="iectrl:*"

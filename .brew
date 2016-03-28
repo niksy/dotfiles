@@ -22,6 +22,7 @@ brew tap homebrew/dupes
 brew tap homebrew/php
 brew tap homebrew/boneyard
 brew tap homebrew/services
+brew tap homebrew/versions
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap niksy/pljoska
@@ -57,7 +58,7 @@ brew cask install colorpicker-hex
 # ==============================================================================
 
 brew install git
-brew install node
+brew install node4-lts
 brew install phantomjs
 brew install mongodb
 brew install libicns

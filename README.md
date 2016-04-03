@@ -32,7 +32,7 @@ Home is where the dotfiles are. These are mine.
 
 `.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add the commands you don’t want to commit to a public repository (e.g. company related information). You put them inside your `~` directory.
 
-`.appconfig_extra` file contains some modifications for installed packages and applications.
+`.osx_extra` file contains some modifications for installed packages and applications.
 
 ### Terminal display
 

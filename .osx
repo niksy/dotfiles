@@ -52,6 +52,9 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 # Set sidebar icon size to small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
+# Disable the over-the-top focus ring animation
+defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
+
 # Increase window resize speed for Cocoa applications
 # Caution: this will change setting globally for every application
 # To change it on per-app basis, instead `NSGlobalDomain`

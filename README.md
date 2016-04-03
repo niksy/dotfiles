@@ -24,10 +24,6 @@ Home is where the dotfiles are. These are mine.
 	sh dotfiles unlink
 	```
 
-4. For your convenience there is a `dotfiles refresh` command which will source all necessary files if you’ve made some changes.
-	
-	Also, if you want to view root directory of your dotfiles, command `dotfiles view` will do that for you.
-
 ### Custom options
 
 `.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add the commands you don’t want to commit to a public repository (e.g. company related information). You put them inside your `~` directory.

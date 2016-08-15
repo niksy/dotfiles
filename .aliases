@@ -50,10 +50,5 @@ alias fhide="defaults write com.apple.finder AppleShowAllFiles -bool false && ki
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-# Find outdated stuff
-alias outdated='sudo softwareupdate -l; brew doctor; brew outdated; npm outdated -g'
-# Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
-
 # Start Docker VM and set Docker environment in shell
 alias dockerval='docker-machine start dev; eval "$(docker-machine env dev)"'

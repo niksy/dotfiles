@@ -52,6 +52,7 @@ brew cask install qlmarkdown
 brew cask install betterzipql
 brew cask install suspicious-package
 brew cask install colorpicker-hex
+brew cask install kdiff3
 
 # ==============================================================================
 # Install standard packages
@@ -63,7 +64,6 @@ brew install phantomjs
 brew install mongodb
 brew install libicns
 brew install icoutils
-brew install kdiff3
 brew install z
 brew install entizeta
 brew install flegma

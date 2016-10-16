@@ -19,7 +19,6 @@ brew update
 # ==============================================================================
 
 brew tap homebrew/dupes
-brew tap homebrew/php
 brew tap homebrew/boneyard
 brew tap homebrew/services
 brew tap homebrew/versions
@@ -62,23 +61,9 @@ brew cask install plex-media-server
 
 brew install git
 brew install node4-lts
-brew install phantomjs
-brew install mongodb
-brew install libicns
-brew install icoutils
 brew install z
 brew install entizeta
-brew install flegma
 brew install ssh-copy-id
-
-# MAMP packages and dependancies
-# ------------------------------------------------------------------------------
-
-brew install php56
-brew install php56-xdebug
-brew install php56-memcache
-brew install memcached
-brew install composer
 
 # Remove outdated versions from the cellar
 brew cleanup

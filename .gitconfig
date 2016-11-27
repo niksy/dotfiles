@@ -50,9 +50,9 @@
 	brep = !git branch -a | grep -i
 	# Push the current branch to the remote (default "origin"), and set it to
 	# track the upstream branch
-	publish = "!git push -u ${1:-origin} $(git branch-name)"
+	publish = "!f() { git push -u ${1:-origin} $(git branch-name); }; f"
 	# Delete the remote version of the current branch
-	unpublish = "!git push ${1:-origin} :$(git branch-name)"
+	unpublish = "!f() { git push ${1:-origin} :$(git branch-name); }; f"
 	# Always add merge commit when merging
 	mergec = merge --no-ff
 	# Rebase operations

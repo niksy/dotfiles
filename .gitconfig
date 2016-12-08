@@ -51,8 +51,8 @@
 	# Push the current branch to the remote (default "origin"), and set it to
 	# track the upstream branch
 	publish = "!f() { git push -u ${1:-origin} $(git branch-name); }; f"
-	# Delete the remote version of the current branch
-	unpublish = "!f() { git push ${1:-origin} :$(git branch-name); }; f"
+	# Delete the remote version of the current branch and unsets remote branch reference
+	unpublish = "!f() { git push ${1:-origin} :$(git branch-name) && git branch --unset-upstream; }; f"
 	# Always add merge commit when merging
 	mergec = merge --no-ff
 	# Rebase operations

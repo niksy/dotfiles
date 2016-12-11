@@ -83,6 +83,10 @@
 	# Make `git rebase` safer on OS X (http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/)
 	trustctime = false
 
+[log]
+	# Nicer date format
+	date = iso
+
 [merge]
 	tool = kdiff3
 	# Include summaries of merged commits in newly created merge commit messages

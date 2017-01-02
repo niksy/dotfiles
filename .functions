@@ -156,7 +156,7 @@ function server() {
 
 # Get current weather based on location from IP or provided with argument
 function meteo() {
-	curl -s4 http://wttr\.in/$1 | head -7
+	curl -s4 http://wttr\.in/$1?m | sed -e "s:226m:202m:g" | head -7
 }
 
 # Generate self-signed SSL certificate for local development

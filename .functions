@@ -156,3 +156,10 @@ function server() {
 function meteo() {
 	curl -s4 http://wttr\.in/$1 | head -7
 }
+
+# Generate self-signed SSL certificate for local development
+function self-signed-cert-generator() {
+	subj="/C=HR/O=Self Signed Certificate Generator/CN=$1"
+	filename=${1//./-}
+	sudo openssl req -subj "$subj" -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout $filename.key -out $filename.crt
+}

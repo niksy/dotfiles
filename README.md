@@ -1,24 +1,24 @@
-# Ivan’s dotfiles
+# dotfiles
 
-Home is where the dotfiles are. These are mine.
+Home is where the dotfiles are.
 
 ## Installation
 
-1. Clone the repository in some directory:  
-	
+1. Clone the repository in some directory:
+
 	```bash
 	git clone https://github.com/niksy/dotfiles.git ~/.dotfiles
 	```
 
-2. Enter the directory where you’ve cloned dotfiles and run install script with `link` argument:  
-	
+1. Enter the directory where you’ve cloned dotfiles and run install script with `link` argument:
+
 	```bash
 	sh dotfiles link
-	``` 
+	```
 
 	The script will symlink/copy all the necessary files to `~` directory. Follow instructions after the job is done.
 
-3. To remove created symlinks and/or remove copied files, run same install script inside `dotfiles` directory, but with `unlink` argument:
+1. To remove created symlinks and/or remove copied files, run same install script inside `dotfiles` directory, but with `unlink` argument:
 
 	```bash
 	sh dotfiles unlink
@@ -28,29 +28,29 @@ Home is where the dotfiles are. These are mine.
 
 `.extra` and `.gitconfig_extra` can be used to add custom commands without the need to change core files or to add the commands you don’t want to commit to a public repository (e.g. company related information). You put them inside your `~` directory.
 
-`.osx_extra` file contains some modifications for installed packages and applications.
+`.macos_extra` file contains some modifications for installed packages and applications.
 
 ### Terminal display
 
-`.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized) (specifically, [fork by @tomislav](https://github.com/tomislav/osx-terminal.app-colors-solarized)). You can find my current OS X terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](http://en.wikipedia.org/wiki/Consolas).
+`.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized) (specifically, [fork by @tomislav](https://github.com/tomislav/osx-terminal.app-colors-solarized)). You can find my current macOS terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](http://en.wikipedia.org/wiki/Consolas).
 
 ![niksy Terminal display](.init/niksy-ss.png)
 
-### OS X defaults
+### macOS defaults
 
-These are some OS X defaults I use, but larger collection can be found in [`.osx` defaults by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) and in the comments at the top of the file in my repository.  
+These are some macOS defaults I use, but larger collection can be found in [`.macos` defaults by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and in the comments at the top of the file in my repository.
 
-Run the supplied install script with following command (remember, this will work **only** on OS X):
+Run the supplied install script with following command (remember, this will work **only** on macOS):
 
 ```bash
-source ~/.dotfiles/.osx
+source ~/.dotfiles/.macos
 ```
 
 ### Homebrew
 
-Installing [Homebrew](http://brew.sh/) will save your sanity while trying to install packages not available by default on OS X.
+Installing [Homebrew](http://brew.sh/) will save your sanity while trying to install packages not available by default on macOS.
 
-If you want the same control for standard OSX apps, try using [Homebrew Cask](http://caskroom.io/).
+If you want the same control for standard macOS apps, try using [Homebrew Cask](http://caskroom.io/).
 
 Automatic package installation can be done with `.brew` script. This will install standard and binary (Cask) packages.
 
@@ -64,7 +64,7 @@ Before installing Homebrew, you should install Xcode CLI Tools.
 
 If you’re on Mavericks, simply enter `xcode-select --install` inside Terminal window and follow instructions.
 
-If you’re on earlier version of OS X, log in to Apple Developer page and find Command Line Tools package (not the whole Xcode).
+If you’re on earlier version of macOS, log in to Apple Developer page and find Command Line Tools package (not the whole Xcode).
 
 To verify that CLI tools are installed, check version of some CLI-tools-provided tool, e.g. `gcc`, via `gcc --version`. If everything is OK, you should see GCC version in your Terminal screen.
 

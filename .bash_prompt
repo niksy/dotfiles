@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Colorize `ls` output
 #     * Color/text combinations: http://webhome.csc.uvic.ca/~sae/seng265/fall04/tips/s265s047-tips/bash-using-colors.html
 #     * Colors are suited for Solarized Light theme (which can be imported from .init folder)

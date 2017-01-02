@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Easier navigation
 # Go to `$HOME` with `cd`
 alias ..="cd .."

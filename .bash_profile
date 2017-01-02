@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Modify paths (for Homebrew, local scripts, Node, etc.)
 export COMPOSER_HOME="/usr/local/composer_packages"
 export PATH="/usr/local/bin:/usr/local/sbin:$COMPOSER_HOME/vendor/bin:$HOME/bin:$HOME/.bin:$PATH"

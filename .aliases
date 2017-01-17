@@ -11,7 +11,7 @@ alias pwdc="pwd | c"
 
 alias sites="cd $HOME/Sites"
 alias hosts="sudo $EDITOR /etc/hosts"
-alias vhosts="cd /etc/apache2/sites-available"
+alias vhosts="cd /usr/local/etc/apache2/2.4/sites-available"
 
 # Search current directory for file
 alias spot="mdfind -onlyin $(pwd) -name"

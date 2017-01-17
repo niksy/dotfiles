@@ -10,7 +10,7 @@ alias gitk="gitx"
 alias pwdc="pwd | c"
 
 alias sites="cd $HOME/Sites"
-alias hosts="sudo $EDITOR /etc/hosts"
+alias hosts="$EDITOR /etc/hosts"
 alias vhosts="cd /usr/local/etc/apache2/2.4/sites-available"
 
 # Search current directory for file

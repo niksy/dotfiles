@@ -162,6 +162,6 @@ function meteo() {
 # Generate self-signed SSL certificate for local development
 function self-signed-cert-generator() {
 	local subj="/CN=$1"
-	local filename=${1//./-}
+	local filename=${1//[.:]/-}
 	sudo openssl req -subj "$subj" -newkey rsa:2048 -days 3650 -nodes -x509 -keyout $filename.key -out $filename.crt
 }

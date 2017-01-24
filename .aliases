@@ -13,11 +13,6 @@ alias sites="cd $HOME/Sites"
 alias hosts="$EDITOR /etc/hosts"
 alias vhosts="cd /usr/local/etc/apache2/2.4/sites-available"
 
-# Search current directory for file
-alias spot="mdfind -onlyin $(pwd) -name"
-# Search current directory for hidden file
-alias spoth="find $(pwd) -name"
-
 # Always use color output for `ls` and display additional info for entries
 # (slashes for directories, @ for symlinks, etc.)
 alias ls="ls -GF"

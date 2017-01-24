@@ -165,3 +165,13 @@ function self-signed-cert-generator() {
 	local filename=${1//[.:]/-}
 	sudo openssl req -subj "$subj" -newkey rsa:2048 -days 3650 -nodes -x509 -keyout $filename.key -out $filename.crt
 }
+
+# Search current directory for file
+function spot() {
+	mdfind -onlyin $(pwd) -name $1
+}
+
+# Search current directory for hidden file
+function spoth() {
+	find $(pwd) -name $1
+}

@@ -49,3 +49,6 @@ alias reload="exec $SHELL -l"
 
 # Start Docker VM and set Docker environment in shell
 alias dockerval='docker-machine start dev; eval "$(docker-machine env dev)"'
+
+# Pretty print JSON
+alias prettyjson='python -m json.tool'

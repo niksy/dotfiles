@@ -365,6 +365,9 @@
 			"addic7edId": 5684,
 			"searchQuery": [
 				"the night of"
+			],
+			"advancedSearchQuery": [
+				"the night of part {{ episode }}"
 			]
 		},
 		{
@@ -515,6 +518,9 @@
 			"addic7edId": 6093,
 			"searchQuery": [
 				"big little lies"
+			],
+			"advancedSearchQuery": [
+				"big little lies part {{ episode }}"
 			]
 		},
 		{

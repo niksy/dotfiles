@@ -1,6 +1,10 @@
 {
 	"showsDir": "~/Movies/TV Shows",
 	"country": ["US", "GB", "HR"],
+	"quality": ["720p", "1080p"],
+	"excludeTorrentService": ["piratebay"],
+	"refreshPlexLibrary": true,
+	"removeWatchedEpisodes": true,
 	"shows": [
 		{
 			"title": "Mr. Robot",
@@ -469,6 +473,111 @@
 			"searchQuery": [
 				"taboo"
 			]
+		},
+		{
+			"title": "Sneaky Pete",
+			"tvmazeId": 2686,
+			"addic7edId": 5342,
+			"searchQuery": [
+				"sneaky pete"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "A Series of Unfortunate Events",
+			"tvmazeId": 3949,
+			"addic7edId": 6095,
+			"searchQuery": [
+				"a series of unfortunate events"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Santa Clarita Diet",
+			"tvmazeId": 14612,
+			"addic7edId": 6174,
+			"searchQuery": [
+				"santa clarita diet"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Legion",
+			"tvmazeId": 6393,
+			"addic7edId": 6092,
+			"searchQuery": [
+				"legion"
+			]
+		},
+		{
+			"title": "Big Little Lies",
+			"tvmazeId": 3080,
+			"addic7edId": 6093,
+			"searchQuery": [
+				"big little lies"
+			]
+		},
+		{
+			"title": "Patriot",
+			"tvmazeId": 8817,
+			"addic7edId": 5498,
+			"searchQuery": [
+				"patriot"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Snatch",
+			"tvmazeId": 16218,
+			"addic7edId": 6193,
+			"searchQuery": [
+				"snatch"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Iron Fist",
+			"tvmazeId": 2175,
+			"addic7edId": 5515,
+			"searchQuery": [
+				"iron fist"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "13 Reasons Why",
+			"tvmazeId": 7194,
+			"addic7edId": 6269,
+			"searchQuery": [
+				"13 reasons why"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Prison Break",
+			"tvmazeId": 541,
+			"addic7edId": 4,
+			"searchQuery": [
+				"prison break"
+			]
+		},
+		{
+			"title": "Unbreakable Kimmy Schmidt",
+			"tvmazeId": 1368,
+			"addic7edId": 5059,
+			"searchQuery": [
+				"unbreakable kimmy schmidt"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Arrested Development",
+			"tvmazeId": 321,
+			"addic7edId": 267,
+			"searchQuery": [
+				"arrested development"
+			],
+			"webChannel": true
 		},
 		{
 			"title": "Crno-bijeli svijet",

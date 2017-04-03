@@ -26,3 +26,6 @@ export GREP_OPTIONS="--color=auto"
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Don’t run auto update for Homebrew
+export HOMEBREW_NO_AUTO_UPDATE="1"

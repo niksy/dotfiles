@@ -34,6 +34,7 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 # Adjust QlColorCode typeface and theme
 defaults write org.n8gray.QLColorCode font Consolas
 defaults write org.n8gray.QLColorCode fontSizePoints 10
+defaults write org.n8gray.QLColorCode extraHLFlags '-l'
 
 # ==============================================================================
 # Notification Center

@@ -46,7 +46,8 @@
 			"addic7edId": 611,
 			"searchQuery": [
 				"community"
-			]
+			],
+			"webChannel": true
 		},
 		{
 			"title": "The Walking Dead",
@@ -376,7 +377,8 @@
 			"addic7edId": 5845,
 			"searchQuery": [
 				"stranger things"
-			]
+			],
+			"webChannel": true
 		},
 		{
 			"title": "Vice Principals",
@@ -392,7 +394,11 @@
 			"addic7edId": 5937,
 			"searchQuery": [
 				"the get down"
-			]
+			],
+			"advancedSearchQuery": [
+				"the get down S{{ _.padStart(season - 1, 2, 0) }}E{{ _.padStart(episode + 6, 2, 0) }}"
+			],
+			"webChannel": true
 		},
 		{
 			"title": "Atlanta",
@@ -584,6 +590,32 @@
 				"arrested development"
 			],
 			"webChannel": true
+		},
+		{
+			"title": "Dimension 404",
+			"tvmazeId": 18185,
+			"addic7edId": 6302,
+			"searchQuery": [
+				"dimension 404"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "The Handmaid’s Tale",
+			"tvmazeId": 16579,
+			"addic7edId": 6265,
+			"searchQuery": [
+				"the handmaids tale"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "American Gods",
+			"tvmazeId": 3182,
+			"addic7edId": 4642,
+			"searchQuery": [
+				"american gods"
+			]
 		},
 		{
 			"title": "Crno-bijeli svijet",

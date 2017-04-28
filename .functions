@@ -163,7 +163,21 @@ function meteo() {
 function self-signed-cert-generator() {
 	local subj="/CN=$1"
 	local filename=${1//[.:]/-}
-	sudo openssl req -subj "$subj" -newkey rsa:2048 -days 3650 -nodes -x509 -keyout $filename.key -out $filename.crt
+	openssl req \
+	    -newkey rsa:2048 \
+	    -x509 \
+	    -nodes \
+	    -keyout $filename.key \
+	    -new \
+	    -out $filename.crt \
+	    -subj "$subj" \
+	    -reqexts SAN \
+	    -extensions SAN \
+	    -config <(cat /System/Library/OpenSSL/openssl.cnf \
+	        <(printf "[SAN]\nsubjectAltName=DNS:$1")) \
+	    -sha256 \
+	    -days 3650
+	openssl x509 -in $filename.crt -text
 }
 
 # Search current directory for file

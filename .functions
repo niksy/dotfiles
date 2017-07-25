@@ -135,25 +135,6 @@ function s() {
 	fi;
 }
 
-# Control Apache and nginx servers
-function server() {
-
-	local nginx_available;
-	nginx_available=false;
-	if command -v nginx >/dev/null 2>&1; then
-		nginx_available=true;
-	fi
-
-	case $1 in
-		start) if [[ $nginx_available == true ]]; then sudo nginx; fi ;;
-		stop) if [[ $nginx_available == true ]]; then sudo nginx -s quit; fi ;;
-		restart) if [[ $nginx_available == true ]]; then sudo nginx -s reload; fi ;;
-	esac
-
-	sudo httpd -k $1
-
-}
-
 # Get current weather based on location from IP or provided with argument
 function meteo() {
 	curl -s4 http://wttr\.in/$1?m | sed -e "s:226m:202m:g" | head -7

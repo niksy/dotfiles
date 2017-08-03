@@ -539,15 +539,6 @@
 			"webChannel": true
 		},
 		{
-			"title": "Snatch",
-			"tvmazeId": 16218,
-			"addic7edId": 6193,
-			"searchQuery": [
-				"snatch"
-			],
-			"webChannel": true
-		},
-		{
 			"title": "Iron Fist",
 			"tvmazeId": 2175,
 			"addic7edId": 5515,

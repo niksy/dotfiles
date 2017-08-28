@@ -142,8 +142,26 @@ function meteo() {
 
 # Generate self-signed SSL certificate for local development
 function self-signed-cert-generator() {
+
 	local subj="/CN=$1"
-	local filename=${1//[.:]/-}
+	local filename="server"
+
+	cp /System/Library/OpenSSL/openssl.cnf temp.cnf
+
+	sed -i '' 's/# req_extensions = v3_req/req_extensions = v3_req/' temp.cnf
+	sed -i '' $'s/\[ v3_req \]/[ v3_req ]\\\n\\\nsubjectAltName = @alt_names/' temp.cnf
+
+	ALT_NAMES="\n[alt_names]"
+	COUNT=1
+
+	for DOMAIN in "$@"
+	do
+	    ALT_NAMES="$ALT_NAMES\nDNS.$COUNT = $DOMAIN"
+	    COUNT=$(($COUNT + 1))
+	done
+
+	printf "$ALT_NAMES" >> temp.cnf
+
 	openssl req \
 	    -newkey rsa:2048 \
 	    -x509 \
@@ -152,13 +170,16 @@ function self-signed-cert-generator() {
 	    -new \
 	    -out $filename.crt \
 	    -subj "$subj" \
-	    -reqexts SAN \
-	    -extensions SAN \
-	    -config <(cat /System/Library/OpenSSL/openssl.cnf \
-	        <(printf "[SAN]\nsubjectAltName=DNS:$1")) \
+	    -reqexts v3_req \
+	    -extensions v3_req \
+	    -config temp.cnf \
 	    -sha256 \
 	    -days 3650
+
 	openssl x509 -in $filename.crt -text
+
+	rm temp.cnf
+
 }
 
 # Search current directory for file

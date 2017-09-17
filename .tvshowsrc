@@ -2,7 +2,7 @@
 	"showsDir": "~/Movies/TV Shows",
 	"country": ["US", "GB", "HR"],
 	"quality": ["720p", "1080p"],
-	"excludeTorrentService": ["piratebay"],
+	"excludeTorrentService": ["piratebay", "extratorrent"],
 	"refreshPlexLibrary": true,
 	"removeWatchedEpisodes": true,
 	"shows": [
@@ -141,14 +141,6 @@
 			]
 		},
 		{
-			"title": "Tron: Uprising",
-			"tvmazeId": 1136,
-			"addic7edId": 2489,
-			"searchQuery": [
-				"tron uprising"
-			]
-		},
-		{
 			"title": "Brooklyn Nine-Nine",
 			"tvmazeId": 49,
 			"addic7edId": 3999,
@@ -197,14 +189,6 @@
 			"addic7edId": 4209,
 			"searchQuery": [
 				"true detective"
-			]
-		},
-		{
-			"title": "Black Sails",
-			"tvmazeId": 182,
-			"addic7edId": 4239,
-			"searchQuery": [
-				"black sails"
 			]
 		},
 		{
@@ -263,14 +247,6 @@
 			"addic7edId": 4928,
 			"searchQuery": [
 				"empire 2015"
-			]
-		},
-		{
-			"title": "Man Seeking Woman",
-			"tvmazeId": 1365,
-			"addic7edId": 4937,
-			"searchQuery": [
-				"man seeking woman"
 			]
 		},
 		{
@@ -389,18 +365,6 @@
 			]
 		},
 		{
-			"title": "The Get Down",
-			"tvmazeId": 2162,
-			"addic7edId": 5937,
-			"searchQuery": [
-				"the get down"
-			],
-			"advancedSearchQuery": [
-				"the get down S{{ _.padStart(season - 1, 2, 0) }}E{{ _.padStart(episode + 6, 2, 0) }}"
-			],
-			"webChannel": true
-		},
-		{
 			"title": "Atlanta",
 			"tvmazeId": 6508,
 			"addic7edId": 5977,
@@ -456,23 +420,6 @@
 			"searchQuery": [
 				"divorce",
 				"divorce 2016"
-			]
-		},
-		{
-			"title": "Mars",
-			"tvmazeId": 17803,
-			"addic7edId": 6070,
-			"searchQuery": [
-				"mars",
-				"mars 2016"
-			]
-		},
-		{
-			"title": "Emerald City",
-			"tvmazeId": 4293,
-			"addic7edId": 6122,
-			"searchQuery": [
-				"emerald city"
 			]
 		},
 		{
@@ -557,14 +504,6 @@
 			"webChannel": true
 		},
 		{
-			"title": "Prison Break",
-			"tvmazeId": 541,
-			"addic7edId": 4,
-			"searchQuery": [
-				"prison break"
-			]
-		},
-		{
 			"title": "Unbreakable Kimmy Schmidt",
 			"tvmazeId": 1368,
 			"addic7edId": 5059,
@@ -606,6 +545,58 @@
 			"addic7edId": 4642,
 			"searchQuery": [
 				"american gods"
+			]
+		},
+		{
+			"title": "Room 104",
+			"tvmazeId": 19772,
+			"addic7edId": 6378,
+			"searchQuery": [
+				"room 104"
+			]
+		},
+		{
+			"title": "Marvel’s The Defenders",
+			"tvmazeId": 2176,
+			"addic7edId": 6459,
+			"searchQuery": [
+				"defenders",
+				"marvel defenders"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "The Tick",
+			"tvmazeId": 14116,
+			"addic7edId": 5959,
+			"searchQuery": [
+				"the tick"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "The Deuce",
+			"tvmazeId": 2748,
+			"addic7edId": 6547,
+			"searchQuery": [
+				"the deuce"
+			]
+		},
+		{
+			"title": "Star Trek: Discovery",
+			"tvmazeId": 7480,
+			"addic7edId": 6553,
+			"searchQuery": [
+				"star trek discovery"
+			]
+		},
+		{
+			"title": "Marvel’s Inhumans",
+			"tvmazeId": 22928,
+			"addic7edId": 6463,
+			"searchQuery": [
+				"inhumans",
+				"marvel inhumans"
 			]
 		},
 		{

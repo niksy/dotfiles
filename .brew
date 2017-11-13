@@ -44,13 +44,12 @@ brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox
 brew cask install adobe-creative-cloud
-brew cask install flash
+brew cask install flash-ppapi
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlmarkdown
 brew cask install betterzipql
 brew cask install suspicious-package
-brew cask install colorpicker-hex
 brew cask install kdiff3
 brew cask install rest
 brew cask install plex-media-server

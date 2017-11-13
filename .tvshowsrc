@@ -2,7 +2,7 @@
 	"showsDir": "~/Movies/TV Shows",
 	"country": ["US", "GB", "HR"],
 	"quality": ["720p", "1080p"],
-	"excludeTorrentService": ["piratebay", "extratorrent"],
+	"excludeTorrentService": ["piratebay", "extratorrent", "eztv"],
 	"refreshPlexLibrary": true,
 	"removeWatchedEpisodes": true,
 	"shows": [
@@ -588,7 +588,8 @@
 			"addic7edId": 6553,
 			"searchQuery": [
 				"star trek discovery"
-			]
+			],
+			"webChannel": true
 		},
 		{
 			"title": "Marvel’s Inhumans",
@@ -597,6 +598,32 @@
 			"searchQuery": [
 				"inhumans",
 				"marvel inhumans"
+			]
+		},
+		{
+			"title": "Marvel’s Runaways",
+			"tvmazeId": 20172,
+			"addic7edId": 6539,
+			"searchQuery": [
+				"runaways",
+				"marvel runaways"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Philip K. Dick’s Electric Dreams",
+			"tvmazeId": 17099,
+			"addic7edId": 6575,
+			"searchQuery": [
+				"electric dreams"
+			]
+		},
+		{
+			"title": "The Gifted",
+			"tvmazeId": 25948,
+			"addic7edId": 6390,
+			"searchQuery": [
+				"gifted"
 			]
 		},
 		{

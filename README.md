@@ -32,7 +32,7 @@ Home is where the dotfiles are.
 
 ### Terminal display
 
-`.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized) (specifically, [fork by @tomislav](https://github.com/tomislav/osx-terminal.app-colors-solarized)). You can find my current macOS terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](http://en.wikipedia.org/wiki/Consolas).
+`.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized) (specifically, [fork by @tomislav](https://github.com/tomislav/osx-terminal.app-colors-solarized)). You can find my current macOS terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](https://en.wikipedia.org/wiki/Consolas).
 
 ![niksy Terminal display](.init/niksy-ss.png)
 
@@ -48,9 +48,9 @@ source ~/.dotfiles/.macos
 
 ### Homebrew
 
-Installing [Homebrew](http://brew.sh/) will save your sanity while trying to install packages not available by default on macOS.
+Installing [Homebrew](https://brew.sh/) will save your sanity while trying to install packages not available by default on macOS.
 
-If you want the same control for standard macOS apps, try using [Homebrew Cask](http://caskroom.io/).
+If you want the same control for standard macOS apps, try using [Homebrew Cask](https://caskroom.io/).
 
 Automatic package installation can be done with `.brew` script. This will install standard and binary (Cask) packages.
 
@@ -81,4 +81,4 @@ Other sources and inspiration include:
 * [Henrik Nyh](https://github.com/henrik/dotfiles)
 * [Jan Moesen](https://github.com/janmoesen/tilde)
 * [Christian Wesselhoeft](https://github.com/xtian/dotfiles)
-* These articles on how to create [better](http://lifehacker.com/5840450/add-a-handy-separator-between-commands-in-your-terminal-on-mac-os-x-and-linux) [bash](http://net.tutsplus.com/tutorials/other/how-to-customize-the-command-prompt/) [prompt](http://net.tutsplus.com/tutorials/tools-and-tips/how-to-customize-your-command-prompt/)
+* These articles on how to create [better](https://lifehacker.com/5840450/add-a-handy-separator-between-commands-in-your-terminal-on-mac-os-x-and-linux) [bash](https://net.tutsplus.com/tutorials/other/how-to-customize-the-command-prompt/) [prompt](https://net.tutsplus.com/tutorials/tools-and-tips/how-to-customize-your-command-prompt/)

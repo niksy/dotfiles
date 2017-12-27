@@ -53,6 +53,9 @@ brew cask install suspicious-package
 brew cask install kdiff3
 brew cask install rest
 brew cask install plex-media-server
+brew cask install docker-edge
+brew cask install gpgtools
+brew cask install viscosity
 
 # ==============================================================================
 # Install standard packages

@@ -29,3 +29,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Don’t run auto update for Homebrew
 export HOMEBREW_NO_AUTO_UPDATE="1"
+
+# Avoid issues with `gpg` as installed via Homebrew.
+# https://stackoverflow.com/a/42265848/96656
+export GPG_TTY=$(tty);

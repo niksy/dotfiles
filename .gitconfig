@@ -92,8 +92,8 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
-# Push changes only on current branch
 [push]
+	# Push changes only on current branch
 	default = upstream
 
 [interactive]

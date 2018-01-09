@@ -44,7 +44,6 @@ brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox
 brew cask install adobe-creative-cloud
-brew cask install flash-ppapi
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlmarkdown

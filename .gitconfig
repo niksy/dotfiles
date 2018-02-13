@@ -58,6 +58,8 @@
 	# Rebase operations
 	rbc = rebase --continue
 	rbs = rebase --skip
+	# Remove local branch
+	rmb = branch -D
 
 	# Files
 	# --------------------------------------------------------------------------

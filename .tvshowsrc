@@ -2,7 +2,7 @@
 	"showsDir": "~/Movies/TV Shows",
 	"country": ["US", "GB", "HR"],
 	"quality": ["720p", "1080p"],
-	"excludeTorrentService": ["piratebay", "extratorrent", "eztv"],
+	"excludeTorrentService": ["piratebay", "extratorrent"],
 	"refreshPlexLibrary": true,
 	"removeWatchedEpisodes": true,
 	"shows": [
@@ -41,15 +41,6 @@
 			]
 		},
 		{
-			"title": "Community",
-			"tvmazeId": 318,
-			"addic7edId": 611,
-			"searchQuery": [
-				"community"
-			],
-			"webChannel": true
-		},
-		{
 			"title": "The Walking Dead",
 			"tvmazeId": 73,
 			"addic7edId": 1175,
@@ -73,15 +64,6 @@
 			"searchQuery": [
 				"game of thrones"
 			]
-		},
-		{
-			"title": "Sense8",
-			"tvmazeId": 1367,
-			"addic7edId": 5108,
-			"searchQuery": [
-				"sense8"
-			],
-			"webChannel": true
 		},
 		{
 			"title": "Humans",
@@ -200,15 +182,6 @@
 			]
 		},
 		{
-			"title": "Halt and Catch Fire",
-			"tvmazeId": 191,
-			"addic7edId": 4545,
-			"searchQuery": [
-				"halt catch fire",
-				"catch fire"
-			]
-		},
-		{
 			"title": "Black Mirror",
 			"tvmazeId": 305,
 			"addic7edId": 2035,
@@ -216,14 +189,6 @@
 				"black mirror"
 			],
 			"webChannel": true
-		},
-		{
-			"title": "The Strain",
-			"tvmazeId": 20,
-			"addic7edId": 4584,
-			"searchQuery": [
-				"the strain"
-			]
 		},
 		{
 			"title": "Gotham",
@@ -239,14 +204,6 @@
 			"addic7edId": 4641,
 			"searchQuery": [
 				"star wars rebels"
-			]
-		},
-		{
-			"title": "Empire",
-			"tvmazeId": 1355,
-			"addic7edId": 4928,
-			"searchQuery": [
-				"empire 2015"
 			]
 		},
 		{
@@ -376,8 +333,8 @@
 			"title": "The Good Place",
 			"tvmazeId": 2790,
 			"addic7edId": 5870,
-			"searchQuery": [
-				"the good place"
+			"advancedSearchQuery": [
+				"the good place S{{ _.padStart(season, 2, 0) }}E{{ _.padStart(episode - 1, 2, 0) }}"
 			]
 		},
 		{
@@ -504,15 +461,6 @@
 			"webChannel": true
 		},
 		{
-			"title": "Unbreakable Kimmy Schmidt",
-			"tvmazeId": 1368,
-			"addic7edId": 5059,
-			"searchQuery": [
-				"unbreakable kimmy schmidt"
-			],
-			"webChannel": true
-		},
-		{
 			"title": "Arrested Development",
 			"tvmazeId": 321,
 			"addic7edId": 267,
@@ -548,14 +496,6 @@
 			]
 		},
 		{
-			"title": "Room 104",
-			"tvmazeId": 19772,
-			"addic7edId": 6378,
-			"searchQuery": [
-				"room 104"
-			]
-		},
-		{
 			"title": "Marvel’s The Defenders",
 			"tvmazeId": 2176,
 			"addic7edId": 6459,
@@ -588,27 +528,7 @@
 			"addic7edId": 6553,
 			"searchQuery": [
 				"star trek discovery"
-			],
-			"webChannel": true
-		},
-		{
-			"title": "Marvel’s Inhumans",
-			"tvmazeId": 22928,
-			"addic7edId": 6463,
-			"searchQuery": [
-				"inhumans",
-				"marvel inhumans"
 			]
-		},
-		{
-			"title": "Marvel’s Runaways",
-			"tvmazeId": 20172,
-			"addic7edId": 6539,
-			"searchQuery": [
-				"runaways",
-				"marvel runaways"
-			],
-			"webChannel": true
 		},
 		{
 			"title": "Philip K. Dick’s Electric Dreams",
@@ -619,12 +539,31 @@
 			]
 		},
 		{
-			"title": "The Gifted",
-			"tvmazeId": 25948,
-			"addic7edId": 6390,
+			"title": "Future Man",
+			"tvmazeId": 3022,
+			"addic7edId": 6540,
 			"searchQuery": [
-				"gifted"
-			]
+				"future man"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Marvel’s The Punisher",
+			"tvmazeId": 16544,
+			"addic7edId": 6461,
+			"searchQuery": [
+				"the punisher"
+			],
+			"webChannel": true
+		},
+		{
+			"title": "Altered Carbon",
+			"tvmazeId": 12036,
+			"addic7edId": 6731,
+			"searchQuery": [
+				"altered carbon"
+			],
+			"webChannel": true
 		},
 		{
 			"title": "Crno-bijeli svijet",

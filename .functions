@@ -191,3 +191,9 @@ function spot() {
 function spoth() {
 	find $(pwd) -name $1
 }
+
+# Renew DHCP lease
+function renew_dhcp_lease() {
+	local NETWORK_INTERFACE=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}' | tr -d '\n')
+	echo "add State:/Network/Interface/$NETWORK_INTERFACE/RefreshConfiguration temporary" | sudo scutil
+}

@@ -34,21 +34,15 @@ brew cask install font-microsoft-cleartype-family
 brew cask install firefox
 brew cask install rowanj-gitx
 brew cask install google-chrome
-brew cask install imagealpha
-brew cask install imageoptim
 brew cask install moom
 brew cask install mpv
-brew cask install opera
 brew cask install sublime-text
 brew cask install the-unarchiver
 brew cask install transmission
 brew cask install virtualbox
-brew cask install adobe-creative-cloud
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlmarkdown
-brew cask install betterzipql
-brew cask install suspicious-package
 brew cask install kdiff3
 brew cask install rest
 brew cask install plex-media-server
@@ -61,9 +55,7 @@ brew cask install viscosity
 # ==============================================================================
 
 brew install git
-brew install node4-lts
 brew install z
-brew install entizeta
 brew install ssh-copy-id
 
 # Remove outdated versions from the cellar

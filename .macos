@@ -134,7 +134,7 @@ defaults write NSGlobalDomain com.apple.scrollwheel.scaling -float 0.3125
 defaults write NSGlobalDomain com.apple.mouse.doubleClickThreshold -float 0.5
 
 # Set scrolling direction to standard behavior
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Set faster key repeat and delay until repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 15

@@ -18,10 +18,7 @@ brew update
 # Ref. https://github.com/Homebrew/homebrew/pull/25203#issuecomment-30569290
 # ==============================================================================
 
-brew tap homebrew/dupes
-brew tap homebrew/boneyard
 brew tap homebrew/services
-brew tap homebrew/versions
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap niksy/pljoska

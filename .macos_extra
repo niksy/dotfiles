@@ -24,13 +24,6 @@ defaults write com.apple.mail NSFixedPitchFont -string "Consolas"
 defaults write com.apple.mail NSFixedPitchFontSize -int 14
 
 # ==============================================================================
-# Messages
-# ==============================================================================
-
-# Load Messages at startup, but hide application windows
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Messages.app", hidden:true}'
-
-# ==============================================================================
 # QuickLook
 # ==============================================================================
 

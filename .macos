@@ -353,6 +353,9 @@ defaults write com.apple.mail EnableToCcInMessageList -bool true
 # Change typeface size
 defaults write com.apple.mail NSFontSize -int 14
 
+# Sort messages in thread from newest to oldest
+defaults write com.apple.mail ConversationViewSortDescending -int 1
+
 # ==============================================================================
 # Photos
 # ==============================================================================

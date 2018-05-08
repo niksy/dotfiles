@@ -5,126 +5,6 @@ function mkd() {
 	mkdir -p "$@" && cd "$@"
 }
 
-# Change working directory to the top-most Finder window location
-function cdf() { # short for `cdfinder`
-	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
-}
-
-# Move the given file(s) to the Trash
-function trash() {
-	local path;
-	for path; do
-		# Make relative paths "absolutey"
-		[ "${path:0:1}" = '/' ] || path="$PWD/$1";
-
-		# Execute the AppleScript to nudge Finder
-		echo "$(cat <<-EOD
-			tell application "Finder"
-				delete POSIX file "${path//\"/\"}"
-			end
-		EOD)" | osascript;
-	done;
-}
-
-# More sensible `tree`
-function treep() {
-	if command -v tree >/dev/null 2>&1; then
-		tree -CN $@ | less -r;
-	fi
-}
-
-# Create a data URL from a file
-function dataurl() {
-	local mimeType=$(file -b --mime-type "$1")
-	if [[ $mimeType == text/* ]]; then
-		mimeType="${mimeType};charset=utf-8"
-	fi
-	echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
-}
-
-# Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
-# Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
-function httpcompression() {
-	encoding="$(curl -LIs -H 'User-Agent: Mozilla/5 Gecko' -H 'Accept-Encoding: gzip,deflate,compress,sdch' "$1" | grep '^Content-Encoding:')" && echo "$1 is encoded using ${encoding#* }" || echo "$1 is not using any encoding"
-}
-
-# Add note to Notes.app (macOS 10.8)
-# Usage: `note 'title' 'body'` or `echo 'body' | note`
-# Title is optional
-function note() {
-	local title
-	local body
-	if [ -t 0 ]; then
-		title="$1"
-		body="$2"
-	else
-		title=$(cat)
-	fi
-	osascript >/dev/null <<EOF
-tell application "Notes"
-	tell account "iCloud"
-		tell folder "Notes"
-			make new note with properties {name:"$title", body:"$title" & "<br><br>" & "$body"}
-		end tell
-	end tell
-end tell
-EOF
-}
-
-# Add reminder to Reminders.app (macOS 10.8)
-# Usage: `remind 'foo'` or `echo 'foo' | remind`
-function remind() {
-	local text
-	if [ -t 0 ]; then
-		text="$1" # argument
-	else
-		text=$(cat) # pipe
-	fi
-	osascript >/dev/null <<EOF
-set theDate to (date (short date string of ((current date)))) + ((24 + 9) * 60 * 60)
-tell application "Reminders"
-	tell the default list
-		make new reminder with properties {name:"$text", remind me date:theDate}
-	end tell
-end tell
-EOF
-}
-
-# Count number of characters and words in string
-function txtcount() {
-	if [[ $# != 0 ]]; then
-		local CHARACTER_COUNT=$(printf "$@" | wc -m | tr -d ' ');
-		local WORD_COUNT=$(printf "$@" | wc -w | tr -d ' ');
-		printf "Number of characters: \e[1m$CHARACTER_COUNT\e[0m\n";
-		printf "Number of words: \e[1m$WORD_COUNT\e[0m\n";
-	else
-		printf "No text supplied.\n";
-	fi
-}
-
-# Compare original and gzipped file size
-function gz() {
-	local origsize=$(wc -c < "$1")
-	local gzipsize
-	if command -v gzip-size >/dev/null 2>&1; then
-		gzipsize=$(gzip-size "$1")
-	else
-		gzipsize=$(gzip -c "$1" | wc -c)
-	fi
-	local ratio=$(echo "$gzipsize * 100/ $origsize" | bc -l)
-	printf "orig: %d bytes\n" "$origsize"
-	printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio"
-}
-
-# Start an HTTP server from a directory, optionally specifying the port
-function simpleserver() {
-	local port="${1:-8000}";
-	sleep 1 && open "http://localhost:${port}/" &
-	# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
-	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
-	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
-}
-
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location
 function s() {
@@ -133,11 +13,6 @@ function s() {
 	else
 		subl "$@";
 	fi;
-}
-
-# Get current weather based on location from IP or provided with argument
-function meteo() {
-	curl -s4 http://wttr\.in/$1?m | sed -e "s:226m:202m:g" | head -7
 }
 
 # Generate self-signed SSL certificate for local development

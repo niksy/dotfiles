@@ -54,6 +54,7 @@ brew cask install viscosity
 brew install git
 brew install z
 brew install ssh-copy-id
+brew install nvm
 
 # Remove outdated versions from the cellar
 brew cleanup

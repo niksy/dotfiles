@@ -55,6 +55,7 @@ brew install git
 brew install z
 brew install ssh-copy-id
 brew install nvm
+brew install shellcheck
 
 # Remove outdated versions from the cellar
 brew cleanup

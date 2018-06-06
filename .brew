@@ -42,7 +42,6 @@ brew cask install qlstephen
 brew cask install qlmarkdown
 brew cask install kdiff3
 brew cask install rest
-brew cask install plex-media-server
 brew cask install docker-edge
 brew cask install gpg-suite
 brew cask install viscosity

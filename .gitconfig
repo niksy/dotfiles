@@ -53,8 +53,6 @@
 	publish = "!f() { git push -u ${1:-origin} $(git branch-name); }; f"
 	# Delete the remote version of the current branch and unsets remote branch reference
 	unpublish = "!f() { git push ${1:-origin} :$(git branch-name) && git branch --unset-upstream; }; f"
-	# Always add merge commit when merging
-	mergec = merge --no-ff
 	# Rebase operations
 	rbc = rebase --continue
 	rbs = rebase --skip

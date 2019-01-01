@@ -159,7 +159,9 @@ defaults write com.apple.screencapture type -string "png"
 
 # Enable subpixel font rendering on non-Apple LCDs
 # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+# Reference: https://ahmadawais.com/fix-macos-mojave-font-rendering-issue/
 defaults write NSGlobalDomain AppleFontSmoothing -int 1
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
 # ==============================================================================
 # Finder

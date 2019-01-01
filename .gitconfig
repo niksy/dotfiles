@@ -58,6 +58,10 @@
 	rbs = rebase --skip
 	# Remove local branch
 	rmb = branch -D
+	# Delete all local branches that have been merged into current branch
+	sweep = "!git branch --merged | egrep -v '(^\\*|master)' | xargs git branch -d"
+	# Delete all local and remote branches that have been merged into current branch
+	sweep-all = "!git branch --merged | egrep -v '(^\\*|master)' | xargs -I % sh -c \"git branch -d % && git push origin :%\""
 
 	# Files
 	# --------------------------------------------------------------------------

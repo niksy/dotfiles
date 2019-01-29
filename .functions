@@ -75,3 +75,18 @@ function nn {
 	node -v
 	npm -v
 }
+
+# Get list of Browserstack projects
+function browserstack-projects {
+	curl -u "${BROWSER_STACK_USERNAME}:${BROWSER_STACK_ACCESS_KEY}" "https://api.browserstack.com/automate/projects.json" | prettyjson
+}
+
+# Get Browserstack project badge key
+function browserstack-project-badge-key {
+	curl -u "${BROWSER_STACK_USERNAME}:${BROWSER_STACK_ACCESS_KEY}" "https://api.browserstack.com/automate/projects/$1/badge_key"
+}
+
+# Get cheatsheet for CLI command
+function cheat {
+	curl cht.sh/"$1"?style=algol_nu
+}

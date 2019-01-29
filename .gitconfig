@@ -77,6 +77,11 @@
 	# Pull with rebase
 	pullr = pull --rebase
 
+	# Misc
+	# --------------------------------------------------------------------------
+	# Delete latest npm version
+	delete-npm-version = "!f() { git uncommit && git unstage && git co -- . && git tag -d $(git describe --tags $(git rev-list --tags --max-count=1)); }; f"
+
 [core]
 	editor = subl -w
 	# Set CRLF endings in Windows checkouts but LF endings on Mac and Linux systems and in the repository

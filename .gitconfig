@@ -98,8 +98,13 @@
 	# Nicer date format
 	date = iso
 
+# Add Meld as mergetool
+[mergetool "meldmac"]
+	cmd = open -W -a Meld --args --auto-merge "$PWD/$LOCAL" "$PWD/$BASE" "$PWD/$REMOTE" --output="$PWD/$MERGED"
+	trustExitCode = true
+
 [merge]
-	tool = kdiff3
+	tool = meldmac
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 

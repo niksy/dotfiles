@@ -90,3 +90,14 @@ function browserstack-project-badge-key {
 function cheat {
 	curl cht.sh/"$1"?style=algol_nu
 }
+
+# Fuzzy-search through command history and execute selected command
+function fh {
+	eval $(history | fzf | sed 's/ *[0-9]* *//')
+}
+
+# Fuzzy-search through command history, copy selected command to clipboard and paste to Terminal
+function fhc {
+	history | fzf | sed 's/ *[0-9]* *//' | c && osascript -e 'tell application "System Events" to keystroke "v" using command down'
+}
+

@@ -101,3 +101,12 @@ function fhc {
 	history | fzf | sed 's/ *[0-9]* *//' | c && osascript -e 'tell application "System Events" to keystroke "v" using command down'
 }
 
+# Open npm package in jsDelivr
+function npmjsdelivr {
+	open "https://www.jsdelivr.com/package/npm/$1"
+}
+
+# cd's to frontmost window of Finder
+function cdf {
+	cd "`osascript -e 'tell application "Finder"' -e 'set myname to POSIX path of (target of window 1 as alias)' -e 'end tell' 2>/dev/null`"
+}

@@ -63,7 +63,7 @@
 	# Delete all local and remote branches that have been merged into current branch
 	sweep-all = "!git branch --merged | egrep -v '(^\\*|master)' | xargs -I % sh -c \"git branch -d % && git push origin :%\""
 	# Fuzzy-search and checkout branch
-	cof = "!f() { git checkout $(git branch -a | fzf | awk '{print $1}' | sed \"s/.* //\"); }; f"
+	cof = "!f() { git checkout $(git branch -a | fzf | awk '{print $1}' | sed \"s/.* //\" | awk -F/ '{print $NF}'); }; f"
 
 	# Files
 	# --------------------------------------------------------------------------

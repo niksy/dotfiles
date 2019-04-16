@@ -91,14 +91,11 @@ function cheat {
 	curl cht.sh/"$1"?style=algol_nu
 }
 
-# Fuzzy-search through command history and execute selected command
+# Sort command history, most recent on bottom, remove unecessary statements, trim whitespace
+# and remove duplicate entries, then fuzzy-search through list, copy selected command
+# to clipboard and paste to Terminal
 function fh {
-	eval $(history | fzf | sed 's/ *[0-9]* *//')
-}
-
-# Fuzzy-search through command history, copy selected command to clipboard and paste to Terminal
-function fhc {
-	history | fzf | sed 's/ *[0-9]* *//' | c && osascript -e 'tell application "System Events" to keystroke "v" using command down'
+	history | sort -nr | sort -uk2 | sort -n | sed 's/ *[0-9]* *//' | awk '{$1=$1;print}' | awk '!a[$0]++' | fzf | c && osascript -e 'tell application "System Events" to keystroke "v" using command down'
 }
 
 # Open npm package in jsDelivr

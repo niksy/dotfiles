@@ -32,3 +32,6 @@ alias reload="exec $SHELL -l"
 
 # Pretty print JSON
 alias prettyjson='python -m json.tool'
+
+# Fix audio issues on macOS by restarting Core Audio service
+alias fixaudio='sudo killall coreaudiod'

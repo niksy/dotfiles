@@ -107,3 +107,10 @@ function npmjsdelivr {
 function cdf {
 	cd "`osascript -e 'tell application "Finder"' -e 'set myname to POSIX path of (target of window 1 as alias)' -e 'end tell' 2>/dev/null`"
 }
+
+# Open file with default editor
+function fe {
+	local files
+	IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+	[[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+}

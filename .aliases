@@ -17,9 +17,8 @@ alias ls="ls -GF"
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# IP addresses
+# Get public IP address
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0 || ipconfig getifaddr en1"
 
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"

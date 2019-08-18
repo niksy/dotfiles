@@ -157,6 +157,9 @@ defaults write com.apple.screencapture location -string "$HOME/Desktop"
 # Save screenshots in PNG format
 defaults write com.apple.screencapture type -string "png"
 
+# Disable floating screenshot thumbnail
+defaults write com.apple.screencapture show-thumbnail -bool FALSE
+
 # Enable subpixel font rendering on non-Apple LCDs
 # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
 # Reference: https://ahmadawais.com/fix-macos-mojave-font-rendering-issue/

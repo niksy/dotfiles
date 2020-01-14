@@ -120,3 +120,8 @@ function localip {
 	INTERFACE=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}');
 	ipconfig getifaddr $INTERFACE
 }
+
+# Get gzipped and minified size of ES module
+function module-size {
+	npx terser -cm --module | npx gzip-size-cli
+}

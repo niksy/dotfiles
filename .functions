@@ -125,3 +125,8 @@ function localip {
 function module-size {
 	npx terser -cm --module | npx gzip-size-cli
 }
+
+function change-shell-to-bash {
+	chsh -s /bin/bash
+	echo "Active shell is $SHELL"
+}

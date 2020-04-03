@@ -126,7 +126,13 @@ function module-size {
 	npx terser -cm --module | npx gzip-size-cli
 }
 
+# Change shell to Bash
 function change-shell-to-bash {
 	chsh -s /bin/bash
 	echo "Active shell is $SHELL"
+}
+
+# Use Docker ImageMagick
+function dimagemagick {
+	docker run --rm -v $PWD:/workdir/ dpokidov/imagemagick "$@"
 }

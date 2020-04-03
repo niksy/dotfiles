@@ -58,10 +58,8 @@
 	rbs = rebase --skip
 	# Remove local branch
 	rmb = branch -D
-	# Delete all local branches that have been merged into current branch
-	sweep = "!git branch --merged | egrep -v '(^\\*|master)' | xargs git branch -d"
-	# Delete all local and remote branches that have been merged into current branch
-	sweep-all = "!git branch --merged | egrep -v '(^\\*|master)' | xargs -I % sh -c \"git branch -d % && git push origin :%\""
+	# Prune remote and delete all local pruned branches
+	sweep = "!git remote prune ${1:-origin} | awk 'BEGIN{FS=\"origin/\"};/pruned/{print $2}' | xargs git branch -D && git branch -vv | awk '/^ .*gone/{print $1}' | xargs git branch -D"
 	# Fuzzy-search and checkout branch
 	cof = "!f() { git checkout $(git branch -a | fzf | awk '{print $1}' | sed \"s/.* //\" | awk -F/ '{print $NF}'); }; f"
 

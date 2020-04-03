@@ -62,6 +62,8 @@
 	sweep = "!git remote prune ${1:-origin} | awk 'BEGIN{FS=\"origin/\"};/pruned/{print $2}' | xargs git branch -D && git branch -vv | awk '/^ .*gone/{print $1}' | xargs git branch -D"
 	# Fuzzy-search and checkout branch
 	cof = "!f() { git checkout $(git branch -a | fzf | awk '{print $1}' | sed \"s/.* //\" | awk -F/ '{print $NF}'); }; f"
+	# Force push with lease
+	pushf = push --force-with-lease
 
 	# Files
 	# --------------------------------------------------------------------------

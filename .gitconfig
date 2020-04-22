@@ -25,7 +25,7 @@
 	# Uncommit last commit
 	uncommit = reset --soft HEAD^
 	# Amend last commit inside editor
-	amend = commit --amend
+	amend = commit --amend --no-edit
 	# Rebase last n commits
 	replay = "!f() { git rebase -i HEAD~$@ || git rebase -i --root; }; f"
 	# Cherry-pick and rebase range of commits

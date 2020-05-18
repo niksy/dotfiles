@@ -116,6 +116,9 @@ defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "4" "HH' h 'mm
 # Disable day of the week in menu bar clock
 defaults write com.apple.menuextra.clock DateFormat -string 'HH:mm'
 
+# Use Paste without any styling
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Paste and Match Style" -string "@v"
+
 # ==============================================================================
 # Periferals, accessibility and input
 # ==============================================================================

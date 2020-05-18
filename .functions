@@ -123,7 +123,8 @@ function localip {
 
 # Get gzipped and minified size of ES module
 function module-size {
-	npx terser -cm --module | npx gzip-size-cli
+	npx rollup-plugin-node-resolve 2>/dev/null
+	npx rollup --input $1 --format es --plugin rollup-plugin-node-resolve | npx terser --comments false --compress --mangle --module | npx gzip-size-cli
 }
 
 # Change shell to Bash

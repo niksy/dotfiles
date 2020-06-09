@@ -4,9 +4,8 @@
 # npm
 # ==============================================================================
 
-npm install -g np
 npm install -g yo
 npm install -g @niksy/generator-paleta
 npm install -g dog-names
 npm install -g iectrl
-npm install -g sync-safari-reading-list
+npm install -g prettier

@@ -43,9 +43,9 @@
 	# Branches
 	# --------------------------------------------------------------------------
 	# Checkout
-	co = checkout
+	co = switch
 	# Checkout new branch
-	cob = checkout -b
+	cob = switch -c
 	# Search for branch
 	brep = !git branch -a | grep -i
 	# Push the current branch to the remote (default "origin"), and set it to
@@ -60,8 +60,8 @@
 	rmb = branch -D
 	# Prune remote and delete all local pruned branches
 	sweep = "!git remote prune ${1:-origin} | awk 'BEGIN{FS=\"origin/\"};/pruned/{print $2}' | xargs git branch -D && git branch -vv | awk '/^ .*gone/{print $1}' | xargs git branch -D"
-	# Fuzzy-search and checkout branch
-	cof = "!f() { git checkout $(git branch -a | fzf | awk '{print $1}' | sed \"s/.* //\" | awk -F/ '{print $NF}'); }; f"
+	# Fuzzy-search and switch branch
+	cof = "!f() { git switch $(git branch -a | fzf | awk '{print $1}' | sed \"s/.* //\" | awk -F/ '{print $NF}'); }; f"
 	# Force push with lease
 	pushf = push --force-with-lease
 

@@ -137,7 +137,7 @@ function change-shell-to-bash {
 function dimagemagick {
 	ENTRYPOINT=$1;
 	shift;
-	docker run --entrypoint="$ENTRYPOINT" --rm -v $PWD:/app --workdir=/app dpokidov/imagemagick "$@"
+	docker run --entrypoint="$ENTRYPOINT" --rm -v "$PWD":/app --workdir=/app dpokidov/imagemagick "$@"
 }
 
 # Start mock HTTP server

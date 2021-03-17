@@ -121,6 +121,11 @@ function localip {
 	ipconfig getifaddr $INTERFACE
 }
 
+# Get VPN IP address
+function vpnip {
+	ifconfig -a | grep -C 1 utun | grep inet | grep "\-\->" | awk '{print $2}'
+}
+
 # Get gzipped and minified size of ES module
 function module-size {
 	npx rollup-plugin-node-resolve 2>/dev/null

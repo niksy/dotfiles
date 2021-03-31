@@ -107,6 +107,7 @@
 	tool = meldmac
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	renamelimit = 2864
 
 [push]
 	# Push changes only on current branch

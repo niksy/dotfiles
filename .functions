@@ -2,7 +2,7 @@
 
 # Create a new directory and enter it
 function mkd() {
-	mkdir -p "$@" && cd "$@"
+	mkdir -p "$@" && cd "$@" || exit
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
@@ -53,19 +53,22 @@ function npmjsdelivr {
 
 # cd's to frontmost window of Finder
 function cdf {
-	cd "`osascript -e 'tell application "Finder"' -e 'set myname to POSIX path of (target of window 1 as alias)' -e 'end tell' 2>/dev/null`"
+	cd "$(osascript -e 'tell application "Finder"' -e 'set myname to POSIX path of (target of window 1 as alias)' -e 'end tell' 2>/dev/null)" || exit
 }
 
 # Open file with default editor
 function fe {
-	local file=$(find . | sed -E "s/^\.\///" | fzf);
-	s $file;
+	local file;
+	file=$(find . | sed -E "s/^\.\///" | fzf);
+	if [[ $file != '' ]]; then
+		s "$file";
+	fi
 }
 
 # Get local IP address
 function localip {
 	INTERFACE=$(route -n get 0.0.0.0 2>/dev/null | awk '/interface: / {print $2}');
-	ipconfig getifaddr $INTERFACE
+	ipconfig getifaddr "$INTERFACE"
 }
 
 # Get VPN IP address
@@ -76,7 +79,7 @@ function vpnip {
 # Get gzipped and minified size of ES module
 function module-size {
 	npx rollup-plugin-node-resolve 2>/dev/null
-	npx rollup --input $1 --format es --plugin rollup-plugin-node-resolve | npx terser --comments false --compress --mangle --module | npx gzip-size-cli
+	npx rollup --input "$1" --format es --plugin rollup-plugin-node-resolve | npx terser --comments false --compress --mangle --module | npx gzip-size-cli
 }
 
 # Change shell to Bash
@@ -94,5 +97,5 @@ function dimagemagick {
 
 # Start mock HTTP server
 function httpbin {
-	docker run -p ${1:-9999}:80 kennethreitz/httpbin
+	docker run -p "${1:-9999}":80 kennethreitz/httpbin
 }

@@ -95,6 +95,11 @@ function dimagemagick {
 	docker run --entrypoint="$ENTRYPOINT" --rm -v "$PWD":/app --workdir=/app dpokidov/imagemagick "$@"
 }
 
+# Use Docker youtube-dl
+function dyoutube-dl {
+	docker run --rm -v "$PWD":/workdir --workdir=/workdir mikenye/youtube-dl "$@"
+}
+
 # Start mock HTTP server
 function httpbin {
 	docker run -p "${1:-9999}":80 kennethreitz/httpbin

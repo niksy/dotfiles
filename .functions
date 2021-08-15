@@ -76,6 +76,11 @@ function vpnip {
 	ifconfig -a | grep -C 1 utun | grep inet | grep "\-\->" | awk '{print $2}'
 }
 
+# Get public IP address
+function publicip {
+	dig @resolver4.opendns.com myip.opendns.com +short
+}
+
 # Get gzipped and minified size of ES module
 function module-size {
 	npx rollup-plugin-node-resolve 2>/dev/null

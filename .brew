@@ -2,8 +2,6 @@
 
 # ==============================================================================
 # Brewfile - one file to install them all
-#
-# Find more Homebrew packages at http://braumeister.org/
 # ==============================================================================
 
 # Make sure we’re using the latest Homebrew
@@ -19,8 +17,6 @@ brew update
 # ==============================================================================
 
 brew tap homebrew/services
-brew tap caskroom/cask
-brew tap caskroom/versions
 brew tap niksy/pljoska
 
 # ==============================================================================

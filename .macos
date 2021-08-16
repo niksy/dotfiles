@@ -385,7 +385,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.apple.universalaccess com.apple.custommenu.apps -array "NSGlobalDomain" "com.apple.finder" "com.apple.Terminal" "com.apple.mail"
 
 # Kill affected applications
-for app in "Address Book" "cfprefsd" "Dashboard" "Dock" "Finder" "iTunes" "Messages" "SystemUIServer" "Terminal" "Photos";
+for app in "Address Book" "cfprefsd" "Dashboard" "Dock" "Finder" "iTunes" "Messages" "SystemUIServer" "Photos";
 do
 	killall "$app" > /dev/null 2>&1
 done

@@ -9,7 +9,9 @@ export LSCOLORS=ehfxcxdxbxegedabagacad
 export LS_COLORS='di=34;47:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43:'
 
 # Load Git prompt (if it exists) for displaying repository status in command line
-[ -f "/usr/local/etc/bash_completion.d/git-prompt.sh" ] && source "/usr/local/etc/bash_completion.d/git-prompt.sh"
+if [ -f "/usr/local/etc/bash_completion.d/git-prompt.sh" ]; then
+	source "/usr/local/etc/bash_completion.d/git-prompt.sh"
+fi
 
 function __print_before_the_prompt() {
 

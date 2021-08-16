@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Modify paths
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.gem/ruby/2.0.0/bin:$HOME/Library/Python/2.7/bin:$HOME/bin:$HOME/.bin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$HOME/.gem/ruby/2.0.0/bin:$HOME/Library/Python/2.7/bin:$HOME/bin:$HOME/.bin:$PATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 export DEBUG="iectrl:*"

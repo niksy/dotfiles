@@ -38,12 +38,9 @@ brew install --cask qlmarkdown
 brew install --cask meld
 brew install --cask rest
 brew install --cask docker
-brew install --cask gpg-suite
 brew install --cask spotify
 brew install --cask handbrake
-brew install --cask postman
 brew install --cask plex
-brew install --cask rtunic
 
 # ==============================================================================
 # Install standard packages

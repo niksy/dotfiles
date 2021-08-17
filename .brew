@@ -32,9 +32,6 @@ brew install --cask sublime-text
 brew install --cask the-unarchiver
 brew install --cask virtualbox
 brew install --cask virtualbox-extension-pack
-brew install --cask qlcolorcode
-brew install --cask qlstephen
-brew install --cask qlmarkdown
 brew install --cask meld
 brew install --cask rest
 brew install --cask docker

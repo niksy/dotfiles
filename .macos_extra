@@ -24,15 +24,6 @@ defaults write com.apple.mail NSFixedPitchFont -string "Consolas"
 defaults write com.apple.mail NSFixedPitchFontSize -int 14
 
 # ==============================================================================
-# QuickLook
-# ==============================================================================
-
-# Adjust QlColorCode typeface and theme
-defaults write org.n8gray.QLColorCode font Consolas
-defaults write org.n8gray.QLColorCode fontSizePoints 10
-defaults write org.n8gray.QLColorCode extraHLFlags '-l'
-
-# ==============================================================================
 # Notification Center
 # ==============================================================================
 
@@ -57,7 +48,6 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 # ==============================================================================
 
 # Recache affected applications
-defaults read org.n8gray.QLColorCode
 defaults read com.apple.mail
 
 # Kill affected applications

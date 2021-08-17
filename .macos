@@ -288,7 +288,7 @@ defaults write com.apple.terminal ShowLineMarks -bool false
 # TextEdit
 # ==============================================================================
 
-# Use plain text mode for new TextEdit documents
+# Use plain text by default
 defaults write com.apple.TextEdit RichText -int 0
 
 # Open and save files as UTF-8 in TextEdit

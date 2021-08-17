@@ -8,9 +8,6 @@
 # TextEdit
 # ==============================================================================
 
-# Use plain text by default
-defaults write com.apple.TextEdit RichText -int 0
-
 # Change monospace typeface to Consolas
 defaults write com.apple.TextEdit NSFixedPitchFont -string "Consolas"
 defaults write com.apple.TextEdit NSFixedPitchFontSize -int 16

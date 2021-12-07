@@ -107,7 +107,7 @@ function dyoutube-dl {
 
 # Use Docker Handbrake CLI
 function dhandbrake {
-	docker run --rm -v "$PWD":/tmp --workdir=/tmp carolynvs/handbrakecli "$@"
+	docker run --rm -v "$PWD":/storage --workdir=/storage jlesage/handbrake /usr/bin/HandBrakeCLI "$@"
 }
 
 # Start mock HTTP server

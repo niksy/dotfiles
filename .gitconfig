@@ -6,7 +6,7 @@
 	# Simple decorated log with 20 latest commits
 	lg = log --oneline --decorate -n 20
 	# Get the current branch name
-	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	branch-name = rev-parse --abbrev-ref HEAD
 	# Copy current branch name
 	cbn = "!git branch-name | tr -d '\n' | pbcopy"
 
@@ -21,15 +21,15 @@
 	# Commit with simple message inside editor
 	cm = commit --reedit-message=HEAD --reset-author
 	# WIP commit which can be discarded, ammended, squashed, etc.
-	wip = "!f() { WIP_MESSAGE=$([[ -z \"$@\" ]] && echo \"\" || echo \": $@\"); git commit --message=\"WIP$WIP_MESSAGE\"; }; f"
+	wip = "!f() { WIP_MESSAGE=$([[ -z "$1" ]] && echo "" || echo ": $1"); git commit --message="WIP$WIP_MESSAGE"; }; f "$@""
 	# Uncommit last commit
 	uncommit = reset --soft HEAD^
 	# Amend last commit inside editor
 	amend = commit --amend
 	# Rebase last n commits
-	replay = "!f() { git rebase -i HEAD~$@ || git rebase -i --root; }; f"
+	replay = "!f() { git rebase -i "HEAD~$1" || git rebase -i --root; }; f "$@""
 	# Cherry-pick and rebase range of commits
-	cherry-pick-range = "!f() { git rebase --onto $(git branch-name) $1^ $2 && echo \"\nCreate new branch with 'git branch {branch-name}'\n\"; }; f"
+	cherry-pick-range = "!f() { git rebase --onto "$(git branch-name)" "$1^" "$2" && printf "\nCreate new branch with 'git branch {branch-name}'\n"; }; f "$@""
 	# Copy last commit message
 	clcm = "!git log -1 --pretty=%B | pbcopy"
 
@@ -50,27 +50,27 @@
 	brep = !git branch -a | grep -i
 	# Push the current branch to the remote (default "origin"), and set it to
 	# track the upstream branch
-	publish = "!f() { git push -u ${1:-origin} $(git branch-name); }; f"
+	publish = "!f() { git push -u "${1:-origin}" "$(git branch-name)"; }; f "$@""
 	# Delete the remote version of the current branch and unsets remote branch reference
-	unpublish = "!f() { git push ${1:-origin} :$(git branch-name) && git branch --unset-upstream; }; f"
+	unpublish = "!f() { git push "${1:-origin}" :"$(git branch-name)" && git branch --unset-upstream; }; f "$@""
 	# Rebase operations
 	rbc = rebase --continue
 	rbs = rebase --skip
 	# Remove local branch
 	rmb = branch -D
 	# Prune remote and delete all local pruned branches
-	sweep = "!git remote prune ${1:-origin} | awk 'BEGIN{FS=\"origin/\"};/pruned/{print $2}' | xargs git branch -D && git branch -vv | awk '/^ .*gone/{print $1}' | xargs git branch -D"
+	sweep = "!git remote prune "${1:-origin}" | awk 'BEGIN{FS=\"origin/\"};/pruned/{print $2}' | xargs git branch -D && git branch -vv | awk '/^ .*gone/{print $1}' | xargs git branch -D"
 	# Fuzzy-search and switch branch
-	cof = "!f() { git switch $(git branch -a | fzf | awk '{print $1}' | sed \"s/.* //\" | awk -F/ '{print $NF}'); }; f"
+	cof = "!f() { git switch "$(git branch -a | fzf | awk '{print $1}' | sed 's/.* //' | awk -F/ '{print $NF}')"; }; f"
 	# Force push with lease
 	pushf = push --force-with-lease
 
 	# Files
 	# --------------------------------------------------------------------------
 	# Checkout our version of a file and add it
-	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+	ours = "!f() { git checkout --ours "$1" && git add "$1"; }; f "$@""
 	# Checkout their version of a file and add it
-	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+	theirs = "!f() { git checkout --theirs "$1" && git add "$1"; }; f "$@""
 	# Revert an applied stash (re-stash)
 	stash-unapply = !git stash show -p | git apply -R
 
@@ -82,7 +82,7 @@
 	# Misc
 	# --------------------------------------------------------------------------
 	# Delete latest npm version
-	delete-npm-version = "!f() { git uncommit && git unstage && git co -- . && git tag -d $(git describe --tags $(git rev-list --tags --max-count=1)); }; f"
+	delete-npm-version = "!f() { git uncommit && git unstage && git co -- . && git tag -d "$(git describe --tags "$(git rev-list --tags --max-count=1)")"; }; f"
 
 [core]
 	editor = subl -w

@@ -105,6 +105,11 @@ function dyoutube-dl {
 	docker run --rm -v "$PWD":/workdir --workdir=/workdir mikenye/youtube-dl "$@"
 }
 
+# Use Docker Handbrake CLI
+function dhandbrake {
+	docker run --rm -v "$PWD":/tmp --workdir=/tmp carolynvs/handbrakecli "$@"
+}
+
 # Start mock HTTP server
 function httpbin {
 	docker run -p "${1:-9999}":80 kennethreitz/httpbin

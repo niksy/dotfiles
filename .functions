@@ -111,6 +111,11 @@ function dhandbrake {
 }
 
 # Start mock HTTP server
-function httpbin {
+function dhttpbin {
 	docker run -p "${1:-9999}":80 kennethreitz/httpbin
+}
+
+# Open latest coverage report in browser
+function opencov {
+	open "coverage/$(ls -1t coverage/ | head -n 1 | grep "/")/index.html"
 }

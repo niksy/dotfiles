@@ -25,7 +25,7 @@ brew tap niksy/pljoska
 
 brew install --cask font-microsoft-cleartype-family
 brew install --cask firefox
-brew install --cask rowanj-gitx
+brew install --cask gitx-gitx
 brew install --cask google-chrome
 brew install --cask moom
 brew install --cask sublime-text

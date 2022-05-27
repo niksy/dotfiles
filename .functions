@@ -97,17 +97,17 @@ function change-shell-to-bash {
 function dimagemagick {
 	ENTRYPOINT=$1;
 	shift;
-	docker run --entrypoint="$ENTRYPOINT" --rm -v "$PWD":/app --workdir=/app dpokidov/imagemagick "$@"
+	docker run --entrypoint="$ENTRYPOINT" --rm -it -v "$PWD":/app --workdir=/app dpokidov/imagemagick "$@"
 }
 
 # Use Docker youtube-dl
 function dyoutube-dl {
-	docker run --rm -v "$PWD":/workdir --workdir=/workdir mikenye/youtube-dl "$@"
+	docker run --rm -it -v "$PWD":/workdir --workdir=/workdir mikenye/youtube-dl "$@"
 }
 
 # Use Docker Handbrake CLI
 function dhandbrake {
-	docker run --rm -v "$PWD":/storage --workdir=/storage jlesage/handbrake /usr/bin/HandBrakeCLI "$@"
+	docker run --rm -it -v "$PWD":/storage --workdir=/storage jlesage/handbrake /usr/bin/HandBrakeCLI "$@"
 }
 
 # Start mock HTTP server

@@ -5,6 +5,8 @@
 	st = status -sb
 	# Simple decorated log with 20 latest commits
 	lg = log --oneline --decorate -n 20
+	# `lg` but only with my commit messages for today
+	lgmt = "!git lg --author=$(git config user.email) --since=$(date +%F)' 00:00' --pretty=format:%s"
 	# Get the current branch name
 	branch-name = rev-parse --abbrev-ref HEAD
 	# Copy current branch name

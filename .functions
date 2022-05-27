@@ -115,7 +115,30 @@ function dhttpbin {
 	docker run -p "${1:-9999}":80 kennethreitz/httpbin
 }
 
+# Generate random passwords
+function random-passwords {
+	nn &>/dev/null
+	SCRIPT=$(curl -s https://raw.githubusercontent.com/allixsenos/passwds-ninja-web/gh-pages/script.js | sed '11,41!d' | sed 's/window.crypto/require("crypto").webcrypto/')
+	node -e "$SCRIPT; console.log(generatePasswords(template, 10).join('\n'));"
+}
+
 # Open latest coverage report in browser
 function opencov {
 	open "coverage/$(ls -1t coverage/ | head -n 1 | grep "/")/index.html"
+}
+
+# Run basic HTTP server
+function serve {
+	if [[ $1 =~ '-S' ]]; then
+		npx devcert-cli generate localhost
+		npx http-server "$@" -C localhost.cert -K localhost.key
+	else
+		npx http-server
+	fi
+}
+
+# Local tunnel
+function localtunnel {
+	npx localtunnel "$@"
+
 }

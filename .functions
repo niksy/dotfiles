@@ -46,6 +46,24 @@ function fh {
 	history | sort -nr | sort -uk2 | sort -n | sed 's/ *[0-9]* *//' | awk '{$1=$1;print}' | awk '!a[$0]++' | fzf | c && osascript -e 'tell application "System Events" to keystroke "v" using command down'
 }
 
+# Open file with default editor
+function fe {
+	local file;
+	file=$(find . | sed -E "s/^\.\///" | fzf);
+	if [[ $file != '' ]]; then
+		s "$file";
+	fi
+}
+
+# Open resource with default assigned application
+function fo {
+	local resource;
+	resource=$(find . | sed -E "s/^\.\///" | fzf);
+	if [[ $resource != '' ]]; then
+		open "$resource";
+	fi
+}
+
 # Open npm package in jsDelivr
 function npmjsdelivr {
 	open "https://www.jsdelivr.com/package/npm/$1"
@@ -54,15 +72,6 @@ function npmjsdelivr {
 # cd's to frontmost window of Finder
 function cdf {
 	cd "$(osascript -e 'tell application "Finder"' -e 'set myname to POSIX path of (target of window 1 as alias)' -e 'end tell' 2>/dev/null)" || exit
-}
-
-# Open file with default editor
-function fe {
-	local file;
-	file=$(find . | sed -E "s/^\.\///" | fzf);
-	if [[ $file != '' ]]; then
-		s "$file";
-	fi
 }
 
 # Get local IP address
@@ -140,5 +149,4 @@ function serve {
 # Local tunnel
 function localtunnel {
 	npx localtunnel "$@"
-
 }

@@ -21,16 +21,6 @@ defaults write com.apple.mail NSFixedPitchFont -string "Consolas"
 defaults write com.apple.mail NSFixedPitchFontSize -int 14
 
 # ==============================================================================
-# Notification Center
-# ==============================================================================
-
-# Change Notification Center sound from horrible Basso to something much nicer.
-# ------------------------------------------------------------------------------
-
-cp /System/Library/Sounds/Pop.aiff $HOME/Library/Sounds/Basso.aiff
-killall NotificationCenter
-
-# ==============================================================================
 # Google Chrome
 # ==============================================================================
 

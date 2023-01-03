@@ -335,13 +335,7 @@ defaults write com.apple.mail PollTime -int 30
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Add keyboard shortcuts
-#   * ⌘ + Enter = send email
-#   * ⌥ + A = Archive mail
-#   * ⌥ + M = Mark mail as read/unread
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21A9"
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Archive" "~A"
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Mark as Read" "~M"
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Mark as Unread" "~M"
 
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true

@@ -114,7 +114,6 @@ defaults write NSGlobalDomain AppleICUTimeFormatStrings -dict-add "4" "HH' h 'mm
 defaults write com.apple.menuextra.clock DateFormat -string 'HH:mm'
 
 # Use Paste without any styling
-defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Paste" -string '@$v'
 defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Paste and Match Style" -string "@v"
 
 # Show battery percentage
@@ -337,6 +336,7 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Add keyboard shortcuts
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21A9"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Paste" -string '@$v'
 
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true

@@ -24,6 +24,14 @@ function nn {
 	npm -v
 }
 
+# Bootstrap new ESM npm package
+function npminit {
+	nn
+	npm init "$@"
+	npm pkg set type="module"
+	npm pkg set scripts.start="node index.js"
+}
+
 # Get list of Browserstack projects
 function browserstack-projects {
 	curl -u "${BROWSER_STACK_USERNAME}:${BROWSER_STACK_ACCESS_KEY}" "https://api.browserstack.com/automate/projects.json" | prettyjson | grep -i -C 10 "$1"

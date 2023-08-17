@@ -23,7 +23,7 @@
 	# Commit with simple message inside editor
 	cm = commit --reedit-message=HEAD --reset-author
 	# WIP commit which can be discarded, ammended, squashed, etc.
-	wip = "!f() { WIP_MESSAGE=$([[ -z "$1" ]] && echo "" || echo ": $1"); git commit --message=\"WIP$WIP_MESSAGE\"; }; f"
+	wip = "!f() { WIP_MESSAGE=$([[ -z "$1" ]] && echo "" || echo ": $1"); git commit --message=\"WIP [ci skip]$WIP_MESSAGE\"; }; f"
 	# Uncommit last commit
 	uncommit = reset --soft HEAD^
 	# Amend last commit inside editor

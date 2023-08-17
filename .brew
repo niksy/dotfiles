@@ -25,16 +25,14 @@ brew tap niksy/pljoska
 
 brew install --cask font-microsoft-cleartype-family
 brew install --cask firefox
-brew install --cask rowanj-gitx
+brew install --cask sublime-merge
 brew install --cask google-chrome
 brew install --cask moom
 brew install --cask sublime-text
 brew install --cask the-unarchiver
-brew install --cask meld
 brew install --cask docker
 brew install --cask spotify
 brew install --cask handbrake
-brew install --cask plex
 brew install --cask monitorcontrol
 
 # ==============================================================================

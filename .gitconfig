@@ -80,6 +80,8 @@
 	# --------------------------------------------------------------------------
 	# Pull with rebase
 	pullr = pull --rebase
+	# Checkout specific pull request
+	checkout-pr = "!f() { git fetch origin "pull/$1/head:pr-$1" && git checkout "pr-$1"; }; f"
 
 	# Misc
 	# --------------------------------------------------------------------------

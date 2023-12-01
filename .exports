@@ -26,6 +26,7 @@ export GREP_OPTIONS="--color=auto"
 
 # Don’t run auto update for Homebrew
 export HOMEBREW_NO_AUTO_UPDATE="1"
+export HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK="1"
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656

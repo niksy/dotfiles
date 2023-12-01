@@ -45,9 +45,9 @@
 	# Branches
 	# --------------------------------------------------------------------------
 	# Checkout
-	co = switch
+	co = checkout
 	# Checkout new branch
-	cob = switch -c
+	cob = checkout -b
 	# Search for branch
 	brep = !git branch -a | grep -i
 	# Push the current branch to the remote (default "origin"), and set it to

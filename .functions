@@ -51,7 +51,9 @@ function cheat {
 # and remove duplicate entries, then fuzzy-search through list, copy selected command
 # to clipboard and paste to Terminal
 function fh {
-	history | sort -nr | sort -uk2 | sort -n | sed 's/ *[0-9]* *//' | awk '{$1=$1;print}' | awk '!a[$0]++' | fzf | c && osascript -e 'tell application "System Events" to keystroke "v" using command down'
+	local entry;
+	entry=$(history | sed 's/ *[0-9]* *//' | awk '{$1=$1;print}' | awk '!a[$0]++');
+	echo "$entry" | sort -nr | sort -uk2 | sort -n | fzf | c && osascript -e 'tell application "System Events" to keystroke "v" using command down';
 }
 
 # Open file with default editor

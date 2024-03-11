@@ -34,8 +34,6 @@ Home is where the dotfiles are.
 
 `.bash_prompt` and everything related to coloring of display is customized to work with [Solarized Light theme](https://github.com/altercation/solarized) (specifically, [fork by @tomislav](https://github.com/tomislav/osx-terminal.app-colors-solarized)). You can find my current macOS terminal preferences inside `.init` directory. Typeface in the screenshot is [Consolas](https://en.wikipedia.org/wiki/Consolas).
 
-![niksy Terminal display](.init/niksy-ss.png)
-
 ### macOS defaults
 
 These are some macOS defaults I use, but larger collection can be found in [`.macos` defaults by Mathias Bynens](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and in the comments at the top of the file in my repository.

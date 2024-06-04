@@ -8,15 +8,11 @@ function mkd() {
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location
 function s() {
-	# Check if Node exists so we can start it since LSP servers require Node
-	# to be present in the PATH at the application start
-	if ! command -v node &> /dev/null; then
-	    nn &> /dev/null;
-	fi;
+	local node_path="$HOME/.nvm/versions/node/v20.11.1/bin";
 	if [ $# -eq 0 ]; then
-		subl .;
+		PATH="$node_path:$PATH" subl .;
 	else
-		subl "$@";
+		PATH="$node_path:$PATH" subl "$@";
 	fi;
 }
 

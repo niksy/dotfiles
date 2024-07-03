@@ -33,7 +33,6 @@ brew install --cask the-unarchiver
 brew install --cask docker
 brew install --cask spotify
 brew install --cask handbrake
-brew install --cask monitorcontrol
 brew install --cask sanesidebuttons
 
 # ==============================================================================

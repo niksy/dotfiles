@@ -23,14 +23,8 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
 
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
 # Pretty print JSON
 alias prettyjson='python3 -m json.tool'
-
-# Fix audio issues on macOS by restarting Core Audio service
-alias fixaudio='sudo killall coreaudiod'

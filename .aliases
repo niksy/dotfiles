@@ -28,3 +28,6 @@ alias reload="exec $SHELL -l"
 
 # Pretty print JSON
 alias prettyjson='python3 -m json.tool'
+
+# Remove node_modules before attempting `ni`
+alias rni="rm -rf node_modules & ni"

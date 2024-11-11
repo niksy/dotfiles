@@ -27,7 +27,6 @@ brew install --cask font-microsoft-cleartype-family
 brew install --cask firefox
 brew install --cask sublime-merge
 brew install --cask google-chrome
-brew install --cask moom
 brew install --cask sublime-text
 brew install --cask the-unarchiver
 brew install --cask docker

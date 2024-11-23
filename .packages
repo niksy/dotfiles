@@ -9,3 +9,4 @@ npm install -g @niksy/generator-paleta
 npm install -g dog-names
 npm install -g prettier
 npm install -g @antfu/ni
+npm install -g taze

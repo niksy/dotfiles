@@ -8,7 +8,7 @@ function mkd() {
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location
 function s() {
-	local node_path="$HOME/.nvm/versions/node/v20.11.1/bin";
+	local node_path="$HOME/.nvm/versions/node/v22.11.0/bin";
 	if [ $# -eq 0 ]; then
 		PATH="$node_path:$PATH" subl .;
 	else

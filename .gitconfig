@@ -29,7 +29,7 @@
 	# Amend last commit inside editor
 	amend = commit --amend
 	# Rebase last n commits
-	replay = "!f() { git rebase -i "HEAD~$1" || git rebase -i --root; }; f "$@""
+	rewind = "!f() { git rebase -i "HEAD~$1" || git rebase -i --root; }; f "$@""
 	# Cherry-pick and rebase range of commits
 	cherry-pick-range = "!f() { git rebase --onto "$(git branch-name)" "$1^" "$2"; printf 'Create new branch with `git branch {branch-name}`\n'; }; f "$@""
 	# Copy last commit message

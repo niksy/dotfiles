@@ -5,6 +5,7 @@ alias ..="cd .."
 alias -- -="cd -"
 
 alias oo="open ."
+alias gitx="smerge ."
 alias gitk="gitx"
 alias pwdc="pwd | c"
 

@@ -98,6 +98,19 @@
 	# Make `git rebase` safer on macOS (http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/)
 	trustctime = false
 
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
+[diff]
+	algorithm = histogram
+	renames = true
+
 [log]
 	# Nicer date format
 	date = iso

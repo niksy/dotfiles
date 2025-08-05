@@ -29,9 +29,9 @@ brew install --cask sublime-merge
 brew install --cask google-chrome
 brew install --cask sublime-text
 brew install --cask the-unarchiver
-brew install --cask docker
+brew install --cask docker-desktop
 brew install --cask spotify
-brew install --cask handbrake
+brew install --cask handbrake-app
 brew install --cask sanesidebuttons
 
 # ==============================================================================

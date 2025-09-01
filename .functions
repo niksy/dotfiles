@@ -143,7 +143,7 @@ function random-passwords {
 }
 
 # Open latest coverage report in browser
-function opencov {
+function open-coverage {
 	open "coverage/$(ls -1t coverage/ | head -n 1 | grep "/")/index.html"
 }
 

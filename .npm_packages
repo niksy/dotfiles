@@ -4,9 +4,10 @@
 # npm
 # ==============================================================================
 
-npm install -g yo
-npm install -g @niksy/generator-paleta
-npm install -g dog-names
-npm install -g prettier
-npm install -g @antfu/ni
-npm install -g taze
+npm install -g \
+	yo \
+	@niksy/generator-paleta \
+	dog-names \
+	prettier \
+	@antfu/ni \
+	taze

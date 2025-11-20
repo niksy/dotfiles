@@ -50,10 +50,10 @@ Installing [Homebrew](https://brew.sh/) will save your sanity while trying to in
 
 If you want the same control for standard macOS apps, try using [Homebrew Cask](https://caskroom.io/).
 
-Automatic package installation can be done with `.brew` script. This will install standard and binary (Cask) packages.
+Automatic package installation can be done with `.brew_packages` script. This will install standard and binary (Cask) packages.
 
 ```bash
-~/.dotfiles/.brew
+~/.dotfiles/.brew_packages
 ```
 
 #### CLI tools

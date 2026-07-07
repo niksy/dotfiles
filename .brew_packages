@@ -18,6 +18,7 @@ brew update
 
 brew tap homebrew/services
 brew tap niksy/pljoska
+brew trust niksy/pljoska
 
 # ==============================================================================
 # Install Cask apps/resources

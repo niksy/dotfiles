@@ -16,13 +16,9 @@ fi
 function __print_before_the_prompt() {
 
 	# Fill with characters for nicer separation
-	let fillsize=${COLUMNS}
-	fill=""
-	while [ "$fillsize" -gt "0" ]
-	do
-	fill="-${fill}"
-	let fillsize=${fillsize}-1
-	done
+	local fillsize=${COLUMNS:-$(tput cols 2>/dev/null || echo 80)}
+	printf -v fill '%*s' "$fillsize" ''
+	fill=${fill// /-}
 
 	printf "\e[0m\e[47m%s\e[0m" "$fill"
 	printf "\n\e[1;30m\e[47m%s\e[0m%s\n" "${PWD/$HOME/~}" "$(__git_ps1 "\e[0m [\e[0;34m%s\e[0m]")"

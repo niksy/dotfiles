@@ -123,9 +123,9 @@ function dimagemagick {
 	docker run --entrypoint="$ENTRYPOINT" --rm -it -v "$PWD":/app --workdir=/app dpokidov/imagemagick "$@"
 }
 
-# Use Docker youtube-dl
+# Use Docker yt-dlp
 function dyoutube-dl {
-	docker run --rm -it -v "$PWD":/workdir --workdir=/workdir mikenye/youtube-dl "$@"
+	docker run --rm -it -v "$PWD":/downloads --workdir=/downloads jauderho/yt-dlp "$@"
 }
 
 # Use Docker Handbrake CLI

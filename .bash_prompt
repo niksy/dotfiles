@@ -26,7 +26,5 @@ function __print_before_the_prompt() {
 }
 
 PROMPT_COMMAND=__print_before_the_prompt
-
 PS1="\[\e[0;31m\]⦿\[\e[0m\e[1m\] "
-# Reset color to default for command output
-[[ -t 1 ]] && trap "printf '\e[0m'" DEBUG
+PS0="\e[0m"

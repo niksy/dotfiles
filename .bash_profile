@@ -3,8 +3,6 @@
 # Modify paths
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$PATH"
 
-export DEBUG="iectrl:*"
-
 # Load the shell dotfiles
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in $HOME/.{bash_prompt,exports,aliases,functions,extra}; do

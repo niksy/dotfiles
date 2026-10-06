@@ -19,7 +19,7 @@
 	# Add all (including non-staged) files
 	aa = add -A
 	# Commit with simple message inside editor
-	cm = commit --reedit-message=HEAD --reset-author
+	cm = "!f() { if git rev-parse --verify --quiet HEAD >/dev/null; then git commit --reedit-message=HEAD --reset-author \"$@\"; else git commit \"$@\"; fi; }; f"
 	# WIP commit which can be discarded, ammended, squashed, etc.
 	wip = "!f() { WIP_MESSAGE=$([[ -z "$1" ]] && echo "" || echo ": $1"); git commit --message=\"WIP [ci skip]$WIP_MESSAGE\"; }; f"
 	# Uncommit last commit

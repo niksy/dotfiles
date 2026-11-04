@@ -22,12 +22,9 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# Add tab completion for Git (if it exists)
-if [ -f "/opt/homebrew/etc/bash_completion.d/git-completion.bash" ]; then
-	source "/opt/homebrew/etc/bash_completion.d/git-completion.bash"
-fi
-
-# Add `z` to shell (if it exits; instructions as per `brew info z`)
-if [ -f "/opt/homebrew/etc/profile.d/z.sh" ]; then
-	source "/opt/homebrew/etc/profile.d/z.sh"
-fi
+# Load Homebrew shell integrations (`bash-completion@2`, `z`, …)
+# `bash-completion@2` also loads everything in `/opt/homebrew/etc/bash_completion.d`
+for file in /opt/homebrew/etc/profile.d/*.sh; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file

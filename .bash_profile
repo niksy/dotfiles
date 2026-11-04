@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Modify paths
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$HOME/.nvm/current/bin:$PATH"
 
 # Load the shell dotfiles
 # * ~/.extra can be used for other settings you don’t want to commit.

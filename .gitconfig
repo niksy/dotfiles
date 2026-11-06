@@ -60,6 +60,10 @@
 	cof = "!f() { git switch "$(git branch -a | fzf | awk '{print $1}' | sed 's/.* //' | awk -F/ '{print $NF}')"; }; f"
 	# Force push with lease
 	pushf = push --force-with-lease
+	# Get worktree path
+	wt-path = "!f() { : git switch ; git worktree list --porcelain | awk -v n=\"$1\" '/^worktree /{p=substr($0,10)} /^branch /{b=substr($0,8); sub(\"refs/heads/\",\"\",b); if (b==n || p ~ \"/\"n\"$\") {print p; exit}}'; }; f"
+	# Go to worktree directory
+	wt-cd = "!f() { : git switch ; d=$(git wt-path \"$1\"); [ -n \"$d\" ] || { echo \"No worktree for: $1\" >&2; return 1; }; cd \"$d\" && exec \"$SHELL\"; }; f"
 
 	# Files
 	# --------------------------------------------------------------------------
